@@ -43,7 +43,7 @@ float calculateLakeArea() {
         }
     }
     //calculates the final lake area using above formula
-    float lakeArea = (float)(200/3) * yVals;
+    float lakeArea = (float)200/3 * yVals;
 
     //returns lakeArea
     return lakeArea;
