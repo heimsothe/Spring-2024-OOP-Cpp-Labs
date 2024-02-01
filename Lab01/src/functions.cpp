@@ -1,4 +1,9 @@
 //TODO - Add the appropriate file header here
+//Title: functions.cpp
+//Desc: implementation file for function.h
+//Name: Elijah Heimsoth
+//Class: 2312 H01
+//Date: 02/01/2024
 
 // TODO - Add any needed #include statements here
 #include <iostream>
