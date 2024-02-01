@@ -60,12 +60,15 @@ float calculateLakeVolume(float areaOfLake) {
 
 int calculateFishStock(float volumeOfLake) {
     /*********************YOUR CODE BELOW THIS LINE***********************/
-
+    int fishStock = volumeOfLake / 1000;
+    return fishStock;
     /*********************YOUR CODE ABOVE THIS LINE***********************/
 }
 
 int calculateMaxLicenses(int fishStock) {
     /*********************YOUR CODE BELOW THIS LINE***********************/
+    int licenseCount = (fishStock * 3/4) / 20;
 
+    return licenseCount;
     /*********************YOUR CODE ABOVE THIS LINE***********************/
 }
