@@ -3,6 +3,7 @@
 // TODO - Add any needed #include statements here
 #include <iostream>
 #include <string>
+#include "functions.h"
 
 // TODO - Implemented the following functions. Refer to the assignment README as needed
 //takes in num to prompt user for specific y variable at current index
