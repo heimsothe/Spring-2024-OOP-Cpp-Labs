@@ -20,14 +20,15 @@ int getInput() {
 
 float calculateLakeArea() {
 /*********************YOUR CODE BELOW THIS LINE***********************/
-    /* Area Formula:
+    /*
+    Area Formula:
     (200/3) * [ f(0) + 4f(200) + 2f(400) + 4f(600) + 2f(800) + 4f(1000) + 2f(1200) + 4f(1400) + f(1600) ]
     */
 
    //Initializes sum of y values
    float yVals = 0;
 
-   //Loops through to gather all 9 y coordinates
+   //Loops through to gather all 9 y coordinates. Applies Simpson's formula to provided y values.
    for (int ndx = 0; ndx <= 8; ndx++){
         //if 1st or Last coordinate use coefficient 1
         if (ndx == 0 || ndx == 8){
