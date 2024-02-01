@@ -6,12 +6,12 @@
 
 // TODO - Implemented the following functions. Refer to the assignment README as needed
 //takes in num to prompt user for specific y variable at current index
-int getInput(int num) {
+int getInput() {
 /*********************YOUR CODE BELOW THIS LINE***********************/
     //initializes input value
     int input = 0;
     //prompts user for input and stores to var input
-    std::cout << "Enter a y coordinate " << num << ": ";
+    std::cout << "Enter a y coordinate: ";
     std::cin >> input;
     //returns input
     return input;
@@ -31,19 +31,19 @@ float calculateLakeArea() {
    for (int ndx = 0; ndx <= 8; ndx++){
         //if 1st or Last coordinate use coefficient 1
         if (ndx == 0 || ndx == 8){
-            yVals += getInput(ndx);
+            yVals += getInput();
         }
         //if ndx is odd use coefficient 4
         else if (ndx % 2 != 0){
-            yVals += (4 * getInput(ndx));
+            yVals += (4 * getInput());
         }
         //if ndx is even use coefficient 2
         else {
-            yVals += (2 * getInput(ndx));
+            yVals += (2 * getInput());
         }
     }
     //calculates the final lake area using above formula
-    float lakeArea = (float)200/3 * yVals;
+    float lakeArea = 200.0/3 * yVals;
 
     //returns lakeArea
     return lakeArea;
