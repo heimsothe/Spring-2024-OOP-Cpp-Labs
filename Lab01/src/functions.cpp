@@ -53,8 +53,8 @@ float calculateLakeArea() {
 
 float calculateLakeVolume(float areaOfLake) {
     /*********************YOUR CODE BELOW THIS LINE***********************/
-    lakeVolume = areaOfLake * 20
-    return lakeVolume
+    float lakeVolume = areaOfLake * 20;
+    return lakeVolume;
     /*********************YOUR CODE ABOVE THIS LINE***********************/
 }
 
