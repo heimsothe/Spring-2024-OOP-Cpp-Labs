@@ -75,18 +75,18 @@ In this assignment, we dive deeper into object-oriented programming knowledge an
      - a `string` that holds the address of a student - **`address`**
      - a `long` that holds the phone number of a student - **`phoneNumber`**
      - a `string` that holds a list of grades for a student - **`grades`**
-       - this string will holds grades separated by a space like so: `"80 90 75"`
-       - When adding a grade, usually a space will be added followed by the grade with one edge case to account for.
+       - this string will holds grades separated by a space: `"80 90 75"`
+       - When adding a grade, after the first grade is entered into a string, a space will be added followed by the next grade.
      - an `int` that holds the number of elements in the grade string- **`count`**
        - The count in the above example would be `3`
    - **Constructors**
      - a default constructor that takes no parameters.
      - a full parameterized constructor that takes values for each member variable in the above order to create a `Student` object.
-   - **Provided Method**
+   - **Provided Function**
      - `int getGrade(int)`
-      - This method will return the ith grade in the list as an integer. 
+      - This function will return the ith grade in the list as an integer. 
       - Note that the list will start at `0`. Thus, for the example before `getGrade(0)` will return `80`, while `getGrade(2)` will return `75`. 
-      - The function will **not** validate your input; Thus, any index value outside the valid range (`[0,2)` for the example) will return a `-1` which may mess with the functionality of your code. You must ensure that only valid inputs are passed to this method.
+      - The function will **not** validate your input. Thus, any index value outside the valid range (`[0,2)` for the example) will return a `-1` which may mess with the functionality of your code. You must ensure that only valid inputs are passed to this function.
     ```cpp int getGrade(int)
     int Student::getGrade(int location)
     { //return the string value of the grade at the given location
@@ -103,7 +103,7 @@ In this assignment, we dive deeper into object-oriented programming knowledge an
       return -1;
     }
     ```
-   - **Member Functions/Methods**
+   - **Member Functions**
      - Getters & Setters (aka Mutators & Accessors) for each member variable except `grades` which is handled differently.
        - Standard Getters: `getSID()`, `getFName()`, `getLName()`, `getAddress`, `getPhone()`, and `getCount()`
        - Standard Setters: `setSID(int)`, `setFName(string)`, `setLName(string)`, `setAddress(string)` and `setPhone(long)`
