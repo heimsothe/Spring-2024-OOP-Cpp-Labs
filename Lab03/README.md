@@ -130,7 +130,7 @@ void Student::setCount()
       - The count should also update based on the new grade string.
   - `displayStudent()` - should output the content of a student object in the following format. **You must use output stream formatting functions to help you with this**:
       - There should be a line of 34 asterisks '*' to start and end this output
-      - The left side of the ':' will be a field of 13 characters, then a colon character ':', the a field of 20 characters for a total of 34 characters.
+      - The left side of the ':' will be a field of 13 characters, then the colon character ':', then a field of 20 characters for a total of 34 characters.
       - The left side should be left aligned and the right side should be right aligned.
       - Do not include the <> characters.
       - Grade information will be printed by a different function.
