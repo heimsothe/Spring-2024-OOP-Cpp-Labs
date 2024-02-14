@@ -108,7 +108,7 @@ void Student::setCount()
       - This function will return the ith grade in the list as an integer. 
       - Note that the list will start at `0`. Thus, for the example before `getGrade(0)` will return `80`, while `getGrade(2)` will return `75`. 
       - The function will **not** validate your input. Thus, any index value outside the valid range (`[0,2)` for the example) will return a `-1` which may mess with the functionality of your code. You must ensure that only valid inputs are passed to this function.
-    ```cpp int getGrade(int)
+```cpp
     int Student::getGrade(int location)
     { //return the string value of the grade at the given location
       std::istringstream iss(grades);
@@ -123,7 +123,7 @@ void Student::setCount()
       }
       return -1;
     }
-    ```
+```
 
 
   - `setStudent(int, string, string, string, long, string)` - this setter will take the SID, FName, LName, Address, Phone Number, and grade string to update a student object.
