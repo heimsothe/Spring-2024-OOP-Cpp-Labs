@@ -2,7 +2,7 @@
 
 # Programming Assignment #3 (PA3)
 
-## Overview
+## Overview 
 
 In this assignment, we dive deeper into object-oriented programming knowledge and C++ control structures. 
 
