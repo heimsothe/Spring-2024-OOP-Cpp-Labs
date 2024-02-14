@@ -311,9 +311,9 @@ Modify it as needed to run the tests as you wish. The autograder will also still
 
 ## Rubric & Grading
 
-Here is the breakdown of the tests, what they test, and how many marks they are worth.
+Here is the breakdown of the tests, what they test, and how many points they are worth.
 
-| Test Name                  | Description                                       | Marks |
+| Test Name                  | Description                                       | points |
 | -------------------------- | ------------------------------------------------- | ----: |
 | getters_test               | Verifies the getters for the `Student` class      |     4 |
 | setters_test               | Verifies the setters for the `Student` class      |     4 |
@@ -329,10 +329,10 @@ Here is the breakdown of the tests, what they test, and how many marks they are 
     style="background-color: #E5F6FF; border-left: 6px solid #2CA5E0; color: #091E42; padding: 10px; border-radius: 5px;">
     <i class="fa-solid fa-circle-info"></i>
     <b style="display: inline; margin-bottom: 8px; font-size: 16px;">Grading Breakdown & Style Points</b>
-    <p>Assignments on Canvas will be recorded out of 100 marks.</p>
+    <p>Assignments on Canvas will be recorded out of 100 points.</p>
     <p>The grading of homework is a combination of completeness and correctness of the outputs and programming style. 
-Completeness and correctness (80 marks) will be assessed automatically through testing on GitHub Classroom, 
-while instructors and TAs will assess the programming style after the deadline (20 marks).</p>
+Completeness and correctness (80 points) will be assessed automatically through testing on GitHub Classroom, 
+while instructors and TAs will assess the programming style after the deadline (20 points).</p>
     <p>Code style will be evaluated using the guidelines shown in the Modules on Canvas.</p>
     <p>This grading will be done manually by the TAs after the deadline.</p>
 </div>
