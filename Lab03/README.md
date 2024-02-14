@@ -82,27 +82,6 @@ In this assignment, we dive deeper into object-oriented programming knowledge an
    - **Constructors**
      - a default constructor that takes no parameters.
      - a full parameterized constructor that takes values for each member variable in the above order to create a `Student` object.
-   - **Provided Function**
-     - `int getGrade(int)`
-      - This function will return the ith grade in the list as an integer. 
-      - Note that the list will start at `0`. Thus, for the example before `getGrade(0)` will return `80`, while `getGrade(2)` will return `75`. 
-      - The function will **not** validate your input. Thus, any index value outside the valid range (`[0,2)` for the example) will return a `-1` which may mess with the functionality of your code. You must ensure that only valid inputs are passed to this function.
-    ```cpp int getGrade(int)
-    int Student::getGrade(int location)
-    { //return the string value of the grade at the given location
-      std::istringstream iss(grades);
-      std::string value;
-      int counter(0);
-      while (iss >> value)
-      {
-          if (counter++ == location)
-          {
-            return stoi(value);
-          }
-      }
-      return -1;
-    }
-    ```
    - **Member Functions**
      - Getters & Setters (aka Mutators & Accessors) for each member variable except `grades` which is handled differently.
        - Standard Getters: `getSID()`, `getFName()`, `getLName()`, `getAddress`, `getPhone()`, and `getCount()`
@@ -124,6 +103,28 @@ void Student::setCount()
 }
 ```
 
+   - **Provided Function - getGrade**
+     - `int getGrade(int)`
+      - This function will return the ith grade in the list as an integer. 
+      - Note that the list will start at `0`. Thus, for the example before `getGrade(0)` will return `80`, while `getGrade(2)` will return `75`. 
+      - The function will **not** validate your input. Thus, any index value outside the valid range (`[0,2)` for the example) will return a `-1` which may mess with the functionality of your code. You must ensure that only valid inputs are passed to this function.
+    ```cpp int getGrade(int)
+    int Student::getGrade(int location)
+    { //return the string value of the grade at the given location
+      std::istringstream iss(grades);
+      std::string value;
+      int counter(0);
+      while (iss >> value)
+      {
+          if (counter++ == location)
+          {
+            return stoi(value);
+          }
+      }
+      return -1;
+    }
+    ```
+
 
   - `setStudent(int, string, string, string, long, string)` - this setter will take the SID, FName, LName, Address, Phone Number, and grade string to update a student object.
       - The count should also update based on the new grade string.
@@ -131,6 +132,7 @@ void Student::setCount()
       - There should be a line of 34 asterisks '*' to start and end this output
       - The left side of the ':' will be a field of 13 characters, then a colon character ':', the a field of 20 characters for a total of 34 characters.
       - The left side should be left aligned and the right side should be right aligned.
+      - Do not include the <> characters.
       - Grade information will be printed by a different function.
 
 
@@ -315,13 +317,13 @@ Here is the breakdown of the tests, what they test, and how many marks they are 
 | -------------------------- | ------------------------------------------------- | ----: |
 | getters_test               | Verifies the getters for the `Student` class      |     4 |
 | setters_test               | Verifies the setters for the `Student` class      |     4 |
-| setStudent_test            | Verifies setStudent updates the correct fields    |     2 |
-| displayStudent_test        | Verifies the getters for the `Student` class      |    10 |
+| setStudent_test            | Verifies `setStudent` updates the correct fields    |     2 |
+| displayStudent_test        | Verifies the display output matches the requirements      |    10 |
 | addGrade_validInput_test   | Checks if `addGrade` properly adds valid grades   |    10 |
 | addGrade_invalidInput_test | Checks if `addGrade` ignores invalid grade values |     5 |
 | convertLetterGrade_test    | Checks functionality of `convertLetterGrade`      |    15 |
 | currentLetterGrade_test    | Checks functionality of `currentLetterGrade`      |    15 |
-| listGrades_test            | Checks functionality of `listGrades`              |    15 |
+| listGrades_test            | Checks functionality/format of `listGrades`              |    15 |
 
 <div
     style="background-color: #E5F6FF; border-left: 6px solid #2CA5E0; color: #091E42; padding: 10px; border-radius: 5px;">
