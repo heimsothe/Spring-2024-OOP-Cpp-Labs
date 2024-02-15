@@ -152,7 +152,7 @@ Phone Number :      <Phone Number>
         - Any grade outside those values must be ignored (not be added), but your program should continue. 
      - `std::string convertLetterGrade(int)`
         - Given a grade value (parameter), the method will return the corresponding letter grade. 
-        - Use our course grading scale from the syllabus to obtain the letter grade.
+        - Use our course grading scale from the syllabus to obtain the letter grade. (**Change: If grade is between 0 and 60, then the letter grade is an 'F'**)
         - The integer value should be considered a valid grade.
         - **Must be implemented using a switch statement**. 
      - `std::string currentLetterGrade()`
