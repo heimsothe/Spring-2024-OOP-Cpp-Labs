@@ -17,11 +17,11 @@ class Book{
         int getNumOfPages();
 
         //setters
-        void setTitle(std::string aTitle);
-        void setAuthor(std::string anAuthor);
-        void setFormat(int aFormat);
-        void setPubYear(int aPubYear);
-        void setNumOfPages(int aNumOfPages);
+        void setTitle(std::string theTitle);
+        void setAuthor(std::string theAuthor);
+        void setFormat(int theFormat);
+        void setPubYear(int thePubYear);
+        void setNumOfPages(int theNumOfPages);
 
         //additional functions
         void displayBook();
@@ -33,7 +33,7 @@ class Book{
         std::string title;
         std::string author;
         std::string format;
-        int format;
+        //int format;
         int pubYear;
         int numOfPages;
 
