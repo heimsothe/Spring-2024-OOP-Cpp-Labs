@@ -26,17 +26,16 @@ class Book{
         //additional functions
         void displayBook();
         void setBook(std::string aTitle, std::string anAuthor, int aFormat, int aPubYear, int aNumOfPages);
-        void estimatedBookWeight(); //uml uses float type: may need to change
-        void estimatedReadingTime(); //uml uses float type: may need to change
+        float estimatedBookWeight(); //uml uses float type: may need to change
+        float estimatedReadingTime(); //uml uses float type: may need to change
 
     private:
         std::string title;
         std::string author;
         std::string format;
-        //int format;
         int pubYear;
         int numOfPages;
 
-}
+};
 
 #endif
