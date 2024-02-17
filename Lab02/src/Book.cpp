@@ -1,3 +1,9 @@
+//Title: Book.cpp
+//Desc: Implementation of Book.h
+//Name: Elijah Heimsoth
+//Class: 2312 H01
+//Date: 02/16/2024
+
 #include <iostream>
 #include <string>
 #include "Book.h"
@@ -6,11 +12,12 @@ Book::Book(){
 //intentionally blank
 }
 
+//title and author only constructor
 Book::Book(std::string aTitle, std::string anAuthor){
     setTitle(aTitle);
     setAuthor(anAuthor);
 }
-
+//full parameter constructor
 Book::Book(std::string aTitle, std::string anAuthor, int aFormat, int aPubYear, int aNumOfPages){
     setTitle(aTitle);
     setAuthor(anAuthor);
@@ -51,6 +58,7 @@ void Book::setAuthor(std::string theAuthor){
 }
 
 void Book::setFormat(int theFormat){
+    //switch case to convert format int to string
     switch(theFormat){
         case 1:{
             format = "Hardcover";
@@ -84,6 +92,7 @@ void Book::setNumOfPages(int theNumOfPages){
 }
 
 //ADDITIONAL FUNCTIONS
+//displays book info in formatted text form
 void Book::displayBook(){
     std::cout << "Title : " << getTitle()
               << "\nAuthor : " << getAuthor()
@@ -94,6 +103,7 @@ void Book::displayBook(){
     return;
 }
 
+//allows for modification of existing book object
 void Book::setBook(std::string aTitle, std::string anAuthor, int aFormat, int aPubYear, int aNumOfPages){
     setTitle(aTitle);
     setAuthor(anAuthor);
@@ -102,9 +112,14 @@ void Book::setBook(std::string aTitle, std::string anAuthor, int aFormat, int aP
     setNumOfPages(aNumOfPages);
 }
 
+//returns float of book weight
 float Book::estimatedBookWeight(){
     std::string bookFormat = getFormat();
-
+    /*
+    2 books pages fit on 1 paper page (front/back), so the formula
+    divides the totalPages by 2 if totalPages is even. If totalPages
+    is odd, it adds 1 totalPages and then divides by 2 (rounding up essentially).
+    */
     int totalPages = getNumOfPages();
     int paperPages;
     if (totalPages % 2 == 0){
@@ -113,7 +128,7 @@ float Book::estimatedBookWeight(){
     else {
         paperPages = (totalPages + 1)/2;
     }
-
+    //formulas for weight based on book format
     float totalWeight = 0.0;
     if (bookFormat == "EBook" || bookFormat == "Audiobook" || bookFormat == "unknown"){
         ;
@@ -126,13 +141,13 @@ float Book::estimatedBookWeight(){
     }
     return totalWeight;
 }
-
+//returns float of reading time
 float Book::estimatedReadingTime(){
     float pageSpeed;
     std::cout << "Enter reading speed (page/minute): ";
     std::cin >> pageSpeed;
     int totalPages = getNumOfPages();
-
+    
     float readTime = totalPages / pageSpeed;
     return readTime;
 }

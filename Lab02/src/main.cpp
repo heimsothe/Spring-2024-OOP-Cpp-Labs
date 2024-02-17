@@ -1,3 +1,9 @@
+//Title: main.cpp
+//Desc: test program for Book class
+//Name: Elijah Heimsoth
+//Class: 2312 H01
+//Date: 02/16/2024
+
 #include <iostream>
 #include <string>
 #include "Book.h"
@@ -29,8 +35,6 @@ int main(){
     //testing estimatedReadingTime
     std::cout << "This will calculate the time to read for TLTWTW" << std::endl;
     std::cout << Narnia.estimatedReadingTime() << std::endl;
-
-
 
     return 0;
 }

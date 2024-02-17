@@ -1,3 +1,9 @@
+//Title: Book.h
+//Desc: Header file for Book class
+//Name: Elijah Heimsoth
+//Class: 2312 H01
+//Date: 02/16/2024
+
 #ifndef BOOK_H
 #define BOOK_H
 #include <string>
