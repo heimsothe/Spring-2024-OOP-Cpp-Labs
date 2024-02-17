@@ -30,11 +30,11 @@ class Book{
         float estimatedReadingTime(); //uml uses float type: may need to change
 
     private:
-        std::string title;
-        std::string author;
-        std::string format;
-        int pubYear;
-        int numOfPages;
+        std::string title = "";
+        std::string author = "";
+        std::string format = "";
+        int pubYear = 0;
+        int numOfPages = 0;
 
 };
 
