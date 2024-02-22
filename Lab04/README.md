@@ -95,7 +95,7 @@ In this assignment, we take a look at function overloading and the array data st
       - `multiplyPair(OrderedPair&, OrderedPair&)` will replace the target object's `xVal` with the multiplication of the $x$ values of the ordered pair parameters and `yVal` with the multiplication of the $y$ values of the ordered pair parameters
       - `dividePair(OrderedPair&, OrderedPair&)` will replace the target object's `xVal` with the division ($x_1 / x_2$) of the $x$ values of the ordered pair parameters and `yVal` with the division of the $y$ values of the ordered pair parameters. Include an error check for dividing by zero, and in that case, print `DIVIDE BY ZERO` to the terminal
    - **Other Functions**
-      - `displayPair()` displays the ordered pair in the format (xVal, yVal), for example: (1, 2). End on a newline. Use `to_string()` to convert the x and y values to a string
+      - `displayPair()` displays the ordered pair in the format (xVal, yVal), for example: (1, 2). End on a newline. `displayPair()` wants 6 decimal places. *Hint: to_string() formats to 6 decimal places by default*
 
 
 
