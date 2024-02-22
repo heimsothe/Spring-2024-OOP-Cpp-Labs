@@ -95,7 +95,7 @@ In this assignment, we take a look at function overloading and the array data st
       - `multiplyPair(OrderedPair&, OrderedPair&)` will replace the target object's `xVal` with the multiplication of the $x$ values of the ordered pair parameters and `yVal` with the multiplication of the $y$ values of the ordered pair parameters
       - `dividePair(OrderedPair&, OrderedPair&)` will replace the target object's `xVal` with the division ($x_1 / x_2$) of the $x$ values of the ordered pair parameters and `yVal` with the division of the $y$ values of the ordered pair parameters. Include an error check for dividing by zero, and in that case, print `DIVIDE BY ZERO` to the terminal
    - **Other Functions**
-      - `displayPair()` displays the ordered pair in the format (xVal, yVal), for example: (1, 2). End on a newline
+      - `displayPair()` displays the ordered pair in the format (xVal, yVal), for example: (1, 2). End on a newline. Use `to_string()` to convert the x and y values to a string
 
 
 
@@ -169,17 +169,17 @@ You will create a series of functions to calculate the average (mean), max/min, 
     - Equation for standard deviation: 
     - ![](.devcontainer/image.png)
   - `display(array<float, MAX_SIZE>&, int&)`
-    - Will receive a populated `array` of floats passed by reference, and an `int` of the array length passed by reference. It will then output the number of grades, the list of grades 5 per line with each value delimited by a space, the average, the maximum value, the minimum value, and the standard deviaton. All of the information must be retrieved and calculated with the other functions. The average and standard deviation values must be formatted to two decimal places
+    - Will receive a populated `array` of floats passed by reference, and an `int` of the array length passed by reference. It will then output the number of grades, the list of grades 5 per line with each value delimited by a space, the average, the maximum value, the minimum value, and the standard deviaton. All of the information must be retrieved and calculated with the other functions. The average and standard deviation values must be formatted to two decimal place
     Example output:
     ```
-    6 grades were entered.  
+    6 grades were entered  
     The values are:  
     100 90 80 70 60  
     50
-    The average of 6 numbers entered is : 75.0
+    The average of the 6 numbers is : 75.0
     The minimum number is : 50
     The maximum number is : 100
-    The Standard Deviation is : 18.70
+    The standard deviation is : 18.70
 
     ```
 
