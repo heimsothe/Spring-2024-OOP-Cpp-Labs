@@ -116,21 +116,21 @@ classDiagram
       -yVal : double
       +OrderedPair()
       +OrderedPair(double, double)
-      +setX(double) : void
-      +setY(double) : void
-      +getX() : double
-      +getY() : double
-      +setPair(double&, double&) : void
-      +addPair() : double
-      +addPair(OrderedPair&, OrderedPair&) : void
-      +subtractPair() : double
-      +subtractPair(OrderedPair&, OrderedPair&) : void
-      +multiplyPair() : double
-      +multiplyPair(OrderedPair&, OrderedPair&) : void
-      +dividePair() : double
-      +dividePair(OrderedPair&, OrderedPair&) : void
-      +powerPair() : double
-      +displayPair() : void
+      +setX(double) void
+      +setY(double) void
+      +getX() double
+      +getY() double
+      +setPair(double&, double&) void
+      +addPair() double
+      +addPair(OrderedPair&, OrderedPair&) void
+      +subtractPair() double
+      +subtractPair(OrderedPair&, OrderedPair&) void
+      +multiplyPair() double
+      +multiplyPair(OrderedPair&, OrderedPair&) void
+      +dividePair() double
+      +dividePair(OrderedPair&, OrderedPair&) void
+      +powerPair() double
+      +displayPair() void
     }
 ```
 
