@@ -225,6 +225,7 @@ classDiagram
         -phoneNumber: long
         -grades: std::string
         -count: int
+        +Student()
         +Student(int, std::string, std::string, std::string, long, std::string, int)
         +getSID() int
         +getFName() std::string
