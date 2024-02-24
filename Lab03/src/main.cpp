@@ -30,7 +30,7 @@ int main(){
     //Me
     Student Me(4905, "Elijah", "Heimsoth", "1935 N Logan St", 3193209, "90 85 75", 3);
     Me.displayStudent();
-    Me.setCount();
+    //Me.setCount();
 
     std::cout << "count for Me is: " << Me.getCount() << std::endl;
     std::cout << "grade location 1: " << Me.getGrade(0) << std::endl;
@@ -38,15 +38,12 @@ int main(){
     std::cout << "grade location 3: " << Me.getGrade(2) << std::endl;
 
     Me.addGrade(69);
-    Me.setCount();
+    //Me.setCount();
     std::cout << "count for Me is: " << Me.getCount() << std::endl;
     std::cout << "grade location 1: " << Me.getGrade(0) << std::endl;
     std::cout << "grade location 2: " << Me.getGrade(1) << std::endl;
     std::cout << "grade location 3: " << Me.getGrade(2) << std::endl;
     std::cout << "grade location 3: " << Me.getGrade(3) << std::endl;
-
-
-    //Me.addGrade()
 
     return 0;
 };

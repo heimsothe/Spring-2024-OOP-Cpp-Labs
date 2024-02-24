@@ -34,8 +34,9 @@ Student::Student(int aSID, std::string aFName, std::string aLName, std::string a
     while(gradeStream >> grd){
         addGrade(grd);
     }
-    setCount();
-    //STILL NEEDS WORK
+    //setCount();
+
+    //No Clue If This Is Right
 }
 
 //getters
@@ -119,7 +120,7 @@ void Student::setStudent(int aSID, std::string aFName, std::string aLName, std::
     while(gradeStream >> grd){
         addGrade(grd);
     }
-    setCount();
+    //setCount();
 }
 
 void Student::displayStudent(){
@@ -144,6 +145,8 @@ void Student::addGrade(int theGrade){
         std::string gradeStr = std::to_string(theGrade);
 
         grades += " " + gradeStr;
+        count++;
+
     }
 }
 
