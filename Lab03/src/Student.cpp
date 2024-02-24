@@ -160,7 +160,6 @@ Must be implemented using a switch statement.
 */
 std::string Student::convertLetterGrade(int theGrade){
     std::string letterGrade = "G";
-    /*
     int range;
 
     if(theGrade <= 60){
@@ -262,7 +261,6 @@ std::string Student::convertLetterGrade(int theGrade){
             break;
         }
     }
-    */
     return letterGrade;
 }
 
