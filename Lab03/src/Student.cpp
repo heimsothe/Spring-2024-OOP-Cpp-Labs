@@ -292,18 +292,19 @@ void Student::listGrades(){
     int gradeSum = 0;
     float cumAvg;
 
-    std::cout << "**************" << std::endl;
+    std::cout << setfill('*') << setw(14) << "*" <<std::endl;
     std::cout << left << setfill(' ') << setw(3) << "GRD" << " "
               << right << setw(10) << "Cum.Avg." << std::endl;
-    std::cout << "**************" << std::endl;
+    std::cout << setfill('*') << setw(14) << "*" <<std::endl;
 
     for(int counter = 0; counter < count; counter++){
         currGrade = getGrade(counter);
         //std::cout << "grade at counter: " << counter << ", is: " << getGrade(counter) << std::endl;
         gradeSum += currGrade;
         cumAvg = float(gradeSum)/(counter+1);
+
         std::cout << std::fixed << std::setprecision(2);
-        std::cout << left << " " << setw(3) << currGrade << " "
+        std::cout << left << setfill(' ') << setw(3) << currGrade << " "
                   << right << setw(10) << cumAvg << std::endl;
     }
 }
