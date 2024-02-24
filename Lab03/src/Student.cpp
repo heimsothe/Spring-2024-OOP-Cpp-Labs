@@ -265,7 +265,17 @@ std::string Student::convertLetterGrade(int theGrade){
 }
 
 std::string Student::currentLetterGrade(){
-    return "";
+    std::istringstream gradeStream(grades);
+    int grd;
+    int grdSum;
+    while(gradeStream >> grd){
+        grdSum += grd;
+    }
+    int grdAvg = grdSum / count;
+
+    std::string currGrade = convertLetterGrade(grdAvg)
+
+    return currGrade;
 }
 
 
