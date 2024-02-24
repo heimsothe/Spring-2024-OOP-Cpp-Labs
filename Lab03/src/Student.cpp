@@ -158,6 +158,7 @@ Use our course grading scale from the syllabus to obtain the letter grade. (Chan
 The integer value should be considered a valid grade.
 Must be implemented using a switch statement.
 */
+/*
 std::string Student::convertLetterGrade(int theGrade){
     std::string letterGrade;
     int range;
@@ -267,6 +268,7 @@ std::string Student::convertLetterGrade(int theGrade){
 std::string Student::currentLetterGrade(){
     return "";
 }
+*/
 
 void Student::listGrades(){
 
