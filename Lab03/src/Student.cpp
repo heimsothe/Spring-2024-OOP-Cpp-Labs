@@ -145,7 +145,7 @@ void Student::addGrade(int theGrade){
         std::string gradeStr = std::to_string(theGrade);
 
         grades += " " + gradeStr;
-        count++;
+        setCount();
 
     }
 }
