@@ -159,7 +159,7 @@ The integer value should be considered a valid grade.
 Must be implemented using a switch statement.
 */
 std::string Student::convertLetterGrade(int theGrade){
-    std::string letterGrade = "G";
+    std::string letterGrade;
     int range;
 
     if(theGrade <= 60){
