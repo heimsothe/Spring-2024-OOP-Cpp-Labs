@@ -303,7 +303,7 @@ void Student::listGrades(){
         gradeSum += currGrade;
         cumAvg = float(gradeSum)/(counter+1);
         std::cout << std::fixed << std::setprecision(2);
-        std::cout << left << setw(3) << currGrade << " "
+        std::cout << left << " " << setw(3) << currGrade << " "
                   << right << setw(10) << cumAvg << std::endl;
     }
 }
