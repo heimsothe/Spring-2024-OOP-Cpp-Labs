@@ -52,7 +52,6 @@ class Student{
         void setPhone(long thePhone);
 
         void setCount();
-        /* int?*/
 
         //additional functions
 
