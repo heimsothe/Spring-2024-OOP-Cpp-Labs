@@ -273,7 +273,7 @@ std::string Student::currentLetterGrade(){
     }
     int grdAvg = grdSum / count;
 
-    std::string currGrade = convertLetterGrade(grdAvg)
+    std::string currGrade = convertLetterGrade(grdAvg);
 
     return currGrade;
 }
