@@ -27,6 +27,13 @@ Student::Student(int aSID, std::string aFName, std::string aLName, std::string a
     setLName(aLName);
     setAddress(anAddress);
     setPhone(aPhone);
+
+    //we have a string of grades "80 70 60"
+    std::istringstream gradeStream(aGrade);
+    int grd;
+    while(gradeStream >> grd){
+        addGrade(grd);
+    }
     setCount();
     //STILL NEEDS WORK
 }
@@ -100,12 +107,19 @@ int Student::getGrade(int location){
 }
 //END OF COPY PASTA
 
-void Student::setStudent(int aSID, std::string aFName, std::string aLName, std::string anAddress, long aPhone, std::string aGrades){
+void Student::setStudent(int aSID, std::string aFName, std::string aLName, std::string anAddress, long aPhone, std::string aGrade){
     setSID(aSID);
     setFName(aFName);
     setLName(aLName);
     setAddress(anAddress);
     setPhone(aPhone);
+
+    std::istringstream gradeStream(aGrade);
+    int grd;
+    while(gradeStream >> grd){
+        addGrade(grd);
+    }
+    setCount();
 }
 
 void Student::displayStudent(){
@@ -169,7 +183,11 @@ std::string Student::convertLetterGrade(int theGrade){
 }
 
 std::string Student::currentLetterGrade(){
-    
+    return "";
+}
+
+void Student::listGrades(){
+
 }
 
 
