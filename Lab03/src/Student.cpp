@@ -34,7 +34,7 @@ Student::Student(int aSID, std::string aFName, std::string aLName, std::string a
     while(gradeStream >> grd){
         addGrade(grd);
     }
-    //setCount();
+    //setCount(); -- REMOVED
 
     //No Clue If This Is Right
 }
