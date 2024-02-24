@@ -162,7 +162,7 @@ std::string Student::convertLetterGrade(int theGrade){
     std::string letterGrade;
     int range;
 
-    if(theGrade <= 59){
+    if(theGrade <= 60){
         range = 0;
     }
     else if(theGrade < 64){
