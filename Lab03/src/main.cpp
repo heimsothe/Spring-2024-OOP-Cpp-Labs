@@ -38,6 +38,7 @@ int main(){
     std::cout << "grade location 2: " << Me.getGrade(1) << std::endl;
     std::cout << "grade location 3: " << Me.getGrade(2) << std::endl;
 
+    std::cout << "Code will now add a new grade of 70 to Me" << std::endl;
     Me.addGrade(70);
     //Me.setCount();
     std::cout << "count for Me is: " << Me.getCount() << std::endl;
@@ -46,15 +47,10 @@ int main(){
     std::cout << "grade location 3: " << Me.getGrade(2) << std::endl;
     std::cout << "grade location 3: " << Me.getGrade(3) << std::endl;
 
-    Me.setStudent(2646, "Elijah", "Heimsoth", "1935 N Logan St", 3193209, "90 85 75 69 50");
+    //Me.setStudent(2646, "Elijah", "Heimsoth", "1935 N Logan St", 3193209, "90 85 75 69 50");
     //Me.setCount();
-    Me.displayStudent();
-    std::cout << "count for Me is: " << Me.getCount() << std::endl;
-    std::cout << "grade location 1: " << Me.getGrade(0) << std::endl;
-    std::cout << "grade location 2: " << Me.getGrade(1) << std::endl;
-    std::cout << "grade location 3: " << Me.getGrade(2) << std::endl;
-    std::cout << "grade location 3: " << Me.getGrade(3) << std::endl;
-    std::cout << "grade location 4: " << Me.getGrade(4) << std::endl;
+
+    Me.listGrades();
 
     return 0;
 };

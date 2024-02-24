@@ -278,10 +278,53 @@ std::string Student::currentLetterGrade(){
     return currGrade;
 }
 
-
+/*
+void listGrades()
+The function will print to standard output a table with each of the grades and the cumulative average of grades.
+Must use a for loop, and format the output stream as discussed in class using the formatting functions.
+The table format contains two columns. The first one with three characters and the second one with ten characters. A space is added between them (a total of fourteen characters).
+Grades should be shown as integers.
+The cumulative average must have two decimal digits.
+Example (assuming the grades given above)
+*/
 void Student::listGrades(){
+    int currGrade;
+    int gradeSum = 0;
+    float cumAvg;
 
+    std::cout << "**************" << std::endl;
+    std::cout << left << setfill(' ') << setw(3) << "GRD" << " "
+              << right << setw(10) << "Cum.Avg." << std::endl;
+    std::cout << "**************" << std::endl;
+
+    for(int counter = 0; counter < count; counter++){
+        currGrade = getGrade(counter);
+        //std::cout << "grade at counter: " << counter << ", is: " << getGrade(counter) << std::endl;
+        gradeSum += currGrade;
+        cumAvg = float(gradeSum)/(counter+1);
+        std::cout << std::fixed << std::setprecision(2);
+        std::cout << left << setw(3) << currGrade << " "
+                  << right << setw(10) << cumAvg << std::endl;
+    }
 }
+/*
+void Student::displayStudent(){
+    //line of asterisks
+    std::cout << setfill('*') << setw(34) << '*' << std::endl;
+    //Rows of student info (note: setfill(' ') needed to replace the fill of '*'s)
+    std::cout << std::left << setfill(' ') << setw(13) << "Student ID" << ":"
+         << std::right << setw(20) << sid << std::endl;
+    std::cout << std::left << setw(13) << "First Name" << ":"
+         << std::right << setw(20) << fName << std::endl;
+    std::cout << std::left << setw(13) << "Last Name" << ":"
+         << std::right << setw(20) << lName << std::endl;
+    std::cout << std::left << setw(13) << "Address" << ":"
+         << std::right << setw(20) << address << std::endl;
+    std::cout << std::left << setw(13) << "Phone Number" << ":"
+         << std::right << setw(20) << phoneNumber << std::endl;
+    std::cout << setfill('*') << setw(34) << '*' << std::endl;
+}
+*/
 
 
 
