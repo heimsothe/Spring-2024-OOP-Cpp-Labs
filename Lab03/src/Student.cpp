@@ -108,6 +108,7 @@ int Student::getGrade(int location){
 }
 //END OF COPY PASTA
 
+//CURRENTLY Stacks grades ontop of any existing grades.
 void Student::setStudent(int aSID, std::string aFName, std::string aLName, std::string anAddress, long aPhone, std::string aGrade){
     setSID(aSID);
     setFName(aFName);
@@ -159,16 +160,84 @@ Must be implemented using a switch statement.
 */
 std::string Student::convertLetterGrade(int theGrade){
     std::string letterGrade;
+    int range;
 
-    switch(theGrade / 10){
-        case 6:
+    if(theGrade <= 59){
+        range = 0;
+    }
+    else if(theGrade < 64){
+        range = 1;
+    }
+    else if(theGrade < 67){
+        range = 2;
+    }
+    else if(theGrade < 70){
+        range = 3;
+    }
+    else if(theGrade < 74){
+        range = 4;
+    }
+    else if(theGrade < 77){
+        range = 5;
+    }
+    else if(theGrade < 80){
+        range = 6;
+    }
+    else if(theGrade < 84){
+        range = 7;
+    }
+    else if(theGrade < 87){
+        range = 8;
+    }
+    else if(theGrade < 90){
+        range = 9;
+    }
+    else if(theGrade < 94){
+        range = 10;
+    }
+    else if(theGrade <= 100){
+        range = 11;
+    }
+
+    switch(range){
+        case 0:
+        {
+            letterGrade = "F";
+            break;
+        }
+        case 1:
+        {
+            letterGrade = "D-";
+            break;
+        }
+        case 2:
         {
             letterGrade = "D";
             break;
         }
-        case 7:
+        case 3:
+        {
+            letterGrade = "D+";
+            break;
+        }
+        case 4:
+        {
+            letterGrade = "C-";
+            break;
+        }
+        case 5:
         {
             letterGrade = "C";
+            break;
+        }
+        case 6:
+        {
+            letterGrade = "C+";
+            break;
+        }
+        case 7:
+        {
+            letterGrade = "B-";
             break;
         }
         case 8:
@@ -177,6 +246,16 @@ std::string Student::convertLetterGrade(int theGrade){
             break;
         }
         case 9:
+        {
+            letterGrade = "B+";
+            break;
+        }
+        case 10:
+        {
+            letterGrade = "A-";
+            break;
+        }
+        case 11:
         {
             letterGrade = "A";
             break;
