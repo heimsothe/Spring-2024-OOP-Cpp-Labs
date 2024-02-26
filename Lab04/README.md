@@ -2,7 +2,7 @@
 
 # Programming Assignment #4 (PA4)
 
-## Overview 
+## Overview
 
 In this assignment, we take a look at function overloading and the array data structure
 
@@ -61,7 +61,7 @@ In this assignment, we take a look at function overloading and the array data st
 
 ## Part 1 - Ordered Pair Class
 
-1. In the `src` directory, create `.cpp` and `.h` files for the `OrderedPair` class. 
+1. In the `src` directory, create `.cpp` and `.h` files for the `OrderedPair` class.
   - the `.h` file must contain only the function declarations (prototypes).
     - Your header file should start (other than comments) with the lines:
       - `#ifndef ORDEREDPAIR_H`
@@ -91,7 +91,7 @@ In this assignment, we take a look at function overloading and the array data st
    - **Pair-wise Arithmetic Functions**
       - **ALL OF THE PAIR-WISE FUNCTIONS ARE PASS BY REFERENCE**
       - `addPair(OrderedPair&, OrderedPair&)` will replace the target object's `xVal` with the sum of the $x$ values of the ordered pair parameters and `yVal` to the sum of the $y$ values of the ordered pair parameters
-      - `subtractPair(OrderedPair&, OrderedPair&)` will replace the target object's `xVal` with the subtraction ($x_1 - x_2$) of the $x$ values of the ordered pair parameters and `yVal` with the subtraction of the $y$ values of the ordered pair parameters 
+      - `subtractPair(OrderedPair&, OrderedPair&)` will replace the target object's `xVal` with the subtraction ($x_1 - x_2$) of the $x$ values of the ordered pair parameters and `yVal` with the subtraction of the $y$ values of the ordered pair parameters
       - `multiplyPair(OrderedPair&, OrderedPair&)` will replace the target object's `xVal` with the multiplication of the $x$ values of the ordered pair parameters and `yVal` with the multiplication of the $y$ values of the ordered pair parameters
       - `dividePair(OrderedPair&, OrderedPair&)` will replace the target object's `xVal` with the division ($x_1 / x_2$) of the $x$ values of the ordered pair parameters and `yVal` with the division of the $y$ values of the ordered pair parameters. Include an error check for dividing by zero, and in that case, print `DIVIDE BY ZERO` to the terminal
    - **Other Functions**
@@ -99,7 +99,7 @@ In this assignment, we take a look at function overloading and the array data st
 
 
 
-  
+
 ### `OrderedPair` UML Diagram.
 
 ```mermaid
@@ -156,7 +156,7 @@ You will create a series of functions to calculate the average (mean), max/min, 
   - **You will not be using a class for this part**
   - Don't forget everything in C++ is case-sensitive. This includes file names.
 2. Functions in `functions`
-  - `getInput(array<float>, MAX_SIZE>& )`
+  - `getInput(array<float, MAX_SIZE>& )`
     - Will receive an empty `array` of floats passed by reference, with `MAX_SIZE` = 50. It will then take user input until a -1 is received, or the array fully populates. Returns an `int` of the array length
   - `randInput(array<float, MAX_SIZE>&, int&)`
     - Will receive an empty `array` of floats passed by reference to be populated with random values, with `MAX_SIZE` = 50, and an `int` passed by reference, which is a number between 1 and 50 of random values to generate. If the value is less than 1 or more than 50, the function will terminate without any values being added to the array. The random values must be between 1 and 100. You must use the [`srand()`](https://en.cppreference.com/w/cpp/numeric/random/srand) method in this function to seed the random values. This function will not return anything
@@ -166,15 +166,15 @@ You will create a series of functions to calculate the average (mean), max/min, 
     - Will receive a populated `array` of floats passed by reference, an `int` of the array length passed by reference, and two `float` values, max and min, passed by reference. It will then find the maximum and minimum values of the array, and store them in their respective variables. This function will not return anything
   - `standardDev(array<float, MAX_SIZE>&, int&)`
     - Will receive a populated `array` of floats passed by reference, and an `int` of the array length passed by reference. It will calculate the standard deviation and return it as a `float`
-    - Equation for standard deviation: 
+    - Equation for standard deviation:
     - ![](.devcontainer/image.png)
   - `display(array<float, MAX_SIZE>&, int&)`
     - Will receive a populated `array` of floats passed by reference, and an `int` of the array length passed by reference. It will then output the number of grades, the list of grades 5 per line with each value delimited by a space, the average, the maximum value, the minimum value, and the standard deviaton. All of the information must be retrieved and calculated with the other functions. The average and standard deviation values must be formatted to two decimal place
     Example output:
     ```
-    6 grades were entered  
-    The values are:  
-    100 90 80 70 60  
+    6 grades were entered
+    The values are:
+    100 90 80 70 60
     50
     The average of the 6 numbers is : 75.0
     The minimum number is : 50
@@ -188,7 +188,7 @@ You will create a series of functions to calculate the average (mean), max/min, 
 <br>
 
 
-3. Create a `main.cpp` file with an `int main()`and use it to test your `OrderedPair` methods. To test the functions, create an empty array of the correct length in main to pass as an argument. `main.cpp` must demonstrate testing of both the `userInput()` and `randInput()` functions with different arrays. 
+3. Create a `main.cpp` file with an `int main()`and use it to test your `OrderedPair` methods. To test the functions, create an empty array of the correct length in main to pass as an argument. `main.cpp` must demonstrate testing of both the `userInput()` and `randInput()` functions with different arrays.
 
 <!-- Important (Yellow) -->
 <div
@@ -199,7 +199,7 @@ You will create a series of functions to calculate the average (mean), max/min, 
 </div>
 
 
-## Testing 
+## Testing
 
 Your code will run against unit tests on an Autograder. The Autograder runs on Ubuntu Linux so the unit tests are configured for that OS only. You can run the tests in a Codespace (which uses Ubuntu as well) or on your own Ubuntu environment (if you have one) using the provided `g++` instructions. Remember tests must pass on the Autograder to receive points.
 
@@ -230,7 +230,7 @@ Here is an example of a build command that could be used for this assignment. In
 g++ src/OrderedPair.cpp tests/gtest_main.a tests/standardDev_test.o -lpthread -o standardDev_test.exe
 ```
 
-Modify it as needed to run the tests as you wish. The autograder will also still run on each push to your repo if you prefer to test that way. 
+Modify it as needed to run the tests as you wish. The autograder will also still run on each push to your repo if you prefer to test that way.
 
 <div
     style="background-color: #FFFBEB; border-left: 6px solid #F97316; color: #813F0B; padding: 16px; border-radius: 5px;">
@@ -279,8 +279,8 @@ Here is the breakdown of the tests, what they test, and how many points they are
     <i class="fa-solid fa-circle-info"></i>
     <b style="display: inline; margin-bottom: 8px; font-size: 16px;">Grading Breakdown & Style Points</b>
     <p>Assignments on Canvas will be recorded out of 100 points.</p>
-    <p>The grading of homework is a combination of completeness and correctness of the outputs and programming style. 
-Completeness and correctness (80 points) will be assessed automatically through testing on GitHub Classroom, 
+    <p>The grading of homework is a combination of completeness and correctness of the outputs and programming style.
+Completeness and correctness (80 points) will be assessed automatically through testing on GitHub Classroom,
 while instructors and TAs will assess the programming style after the deadline (20 points).</p>
     <p>Code style will be evaluated using the guidelines shown in the Modules on Canvas.</p>
     <p>This grading will be done manually by the TAs after the deadline.</p>
