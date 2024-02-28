@@ -171,7 +171,7 @@ You will create a series of functions to calculate the average (mean), max/min, 
     - Equation for standard deviation:
     - ![](.devcontainer/image.png)
   - `display(array<float, MAX_SIZE>&, int&)`
-    - Will receive a populated `array` of floats passed by reference, and an `int` of the array length passed by reference. It will then output the number of grades, the list of grades 5 per line with each value delimited by a space, the average, the maximum value, the minimum value, and the standard deviaton. All of the information must be retrieved and calculated with the other functions. The average and standard deviation values must be formatted to two decimal place
+    - Will receive a populated `array` of floats passed by reference, and an `int` of the array length passed by reference. It will then output the number of grades, the list of grades 5 per line with each value delimited by a space, the average, the maximum value, the minimum value, and the standard deviaton. All of the information must be retrieved and calculated with the other functions.  
     Example output:
     ```
     6 grades were entered
@@ -181,7 +181,7 @@ You will create a series of functions to calculate the average (mean), max/min, 
     The average of the 6 numbers is : 75.0
     The minimum number is : 50
     The maximum number is : 100
-    The standard deviation is : 18.70
+    The standard deviation is : 18.708
 
     ```
 
