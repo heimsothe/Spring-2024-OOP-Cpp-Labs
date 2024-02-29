@@ -10,7 +10,7 @@
 #include <ctime>
 #include <iomanip>
 
-#include "fcn.h"
+#include "functions.h"
 
 // const size_t MAX_SIZE = 50; //maybe const int or const unsigned int
 
