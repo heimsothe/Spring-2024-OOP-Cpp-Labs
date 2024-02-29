@@ -6,6 +6,7 @@
     using std::string;
     using std::to_string;
 #include <cmath>
+    using std::pow;
 #include <array>
 #include <random>
 #include <cstddef>
@@ -125,10 +126,15 @@ void OrderedPair::dividePair(OrderedPair& pair1, OrderedPair& pair2){
     else{
         double xQuo = xOne/xTwo;
         xVal = xQuo;
-        
+
         double yQuo = yOne/yTwo;
         yVal = yQuo;
     }
+}
+
+double OrderedPair::powerPair(){
+    double xPowY = pow(xVal,yVal);
+    return xPowY;
 }
 
 //OTHER FUNCTIONS
