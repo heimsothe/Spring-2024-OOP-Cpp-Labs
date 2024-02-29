@@ -2,7 +2,7 @@
     using std::cout;
     using std::cin;
     using std::endl;
-#include <sting>
+#include <string>
     using std::string;
     using std::to_string;
 #include <cmath>
@@ -105,6 +105,7 @@ void OrderedPair::multiplyPair(OrderedPair& pair1, OrderedPair& pair2){
 double OrderedPair::dividePair(){
     if(yVal == 0){
         cout << "yVal==0" << endl;
+        return 0;
     }
     else{
         double quotient = xVal/yVal;
