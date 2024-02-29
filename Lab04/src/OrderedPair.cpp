@@ -104,7 +104,8 @@ void OrderedPair::multiplyPair(OrderedPair& pair1, OrderedPair& pair2){
 
 double OrderedPair::dividePair(){
     if(yVal == 0){
-        cout << "yVal==0" << endl;
+        cout << "yVal==0";
+        cout << endl;
         return 0;
     }
     else{
