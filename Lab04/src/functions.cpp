@@ -14,7 +14,6 @@
 
 // const size_t MAX_SIZE = 50; //maybe const int or const unsigned int
 
-
 int getInput(array<float, MAX_SIZE>& anArray){
     bool sentinel = true;
     float userInput = 0;
@@ -35,4 +34,25 @@ int getInput(array<float, MAX_SIZE>& anArray){
 
     return arrayLength;
 
+}
+
+void randInput(array<float, MAX_SIZE>& anArray, int& anInt){
+    //anInt is number of random values desired (1-50)
+    //if anInt < 1 || anInt > 100 --> terminate function
+
+    //random values generate must be 1-100 using srand
+
+    //set seed for rand
+    srand(static_cast<unsigned int>(time(0)));
+
+    if (anInt < 1 || anInt > 50){
+        //terminate
+        return;
+    }
+    else{
+        for (int ndx = 0; ndx < anInt; ndx++){
+            int randVal = (rand() % 100) + 1;
+            anArray[ndx] = randVal;
+        }
+    ran}
 }

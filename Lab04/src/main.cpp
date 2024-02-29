@@ -10,29 +10,13 @@
 #include <ctime>
 #include <iomanip>
 
-//#include "fcn.h"
+#include "functions.h"
 
 int main(){
-    bool sentinel = true;
-    float usrInput = 0;
-    int count = 0;
-    float sum = 0;
+    array<float, MAX_SIZE> myArray;
+    cout << myArray[0] << endl;
+    getInput(myArray);
+    cout << myArray[0] << endl;
 
-    while(sentinel == true){
-        cout << "Enter a float (-1 to quit): ";
-        cin >> usrInput;
-
-        if (usrInput == -1){
-            sentinel = false;
-        }
-        else {
-            //add to array
-            cout << usrInput << " value added to array" << endl;
-            sum += usrInput;
-            count++;
-            cout << sum << " is the sum" << endl;
-        }
-    }
-    cout << "count is: " << count << endl;
-    return count;
+    return 0;
 }
