@@ -2,19 +2,22 @@
 #include <iostream>
 #include <cmath>
 #include <array>
+    using std::array;
 #include <random>
 #include <cstddef>
 #include <ctime>
 #include <iomanip>
 
-int getInput(array<float, MAX_SIZE>&);
+const size_t MAX_SIZE = 50;
 
-void randInput(array<float, MAX_SIZE>&, int&);
+int getInput(array<float, MAX_SIZE>& anArray);
 
-float average(array<float, MAX_SIZE>&, int&);
+void randInput(array<float, MAX_SIZE>& anArray, int& anInt);
 
-void maxAndMin(array<float, MAX_SIZE>&, int&, float& max, float& min);
+float average(array<float, MAX_SIZE>& anArray, int& anInt);
 
-float standardDev(array<float, MAX_SIZE>&, int&);
+void maxAndMin(array<float, MAX_SIZE>& anArray, int& anInt, float& max, float& min);
 
-void display(array<float, MAX_SIZE>&, int&);
+float standardDev(array<float, MAX_SIZE>& anArray, int& anInt);
+
+void display(array<float, MAX_SIZE>& anArray, int& anInt);
