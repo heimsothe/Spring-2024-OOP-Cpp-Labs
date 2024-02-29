@@ -32,7 +32,7 @@ int getInput(array<float, MAX_SIZE>& anArray){
         }
     }
 
-    return anArray.size();
+    return arrayLength;
 
 }
 
