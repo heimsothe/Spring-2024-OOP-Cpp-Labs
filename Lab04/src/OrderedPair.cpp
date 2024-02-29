@@ -125,11 +125,7 @@ void OrderedPair::dividePair(OrderedPair& pair1, OrderedPair& pair2){
     else{
         double xQuo = xOne/xTwo;
         xVal = xQuo;
-    /*}
-    if(){
-        cout << "DIVIDE BY ZERO";
-    }
-    else{*/
+        
         double yQuo = yOne/yTwo;
         yVal = yQuo;
     }
