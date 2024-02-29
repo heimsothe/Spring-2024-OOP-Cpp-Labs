@@ -116,22 +116,20 @@ double OrderedPair::dividePair(){
 void OrderedPair::dividePair(OrderedPair& pair1, OrderedPair& pair2){
     double xOne = pair1.getX();
     double xTwo = pair2.getX();
+    double yOne = pair1.getY();
+    double yTwo = pair2.getY();
 
-    if(xTwo == 0){
+    if(xTwo == 0 || yTwo == 0){
         cout << "DIVIDE BY ZERO";
     }
     else{
         double xQuo = xOne/xTwo;
         xVal = xQuo;
-    }
-    cout << endl;
-    double yOne = pair1.getY();
-    double yTwo = pair2.getY();
-
-    if(yTwo == 0){
+    /*}
+    if(){
         cout << "DIVIDE BY ZERO";
     }
-    else{
+    else{*/
         double yQuo = yOne/yTwo;
         yVal = yQuo;
     }
