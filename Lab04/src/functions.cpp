@@ -32,7 +32,7 @@ int getInput(array<float, MAX_SIZE>& anArray){
         }
     }
 
-    return arrayLength;
+    return anArray.size();
 
 }
 
@@ -55,4 +55,9 @@ void randInput(array<float, MAX_SIZE>& anArray, int& anInt){
             anArray[ndx] = randVal;
         }
     }
+}
+
+float average(array<float, MAX_SIZE>& anArray, int& anInt){
+
+    return 0;
 }
