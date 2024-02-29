@@ -54,5 +54,5 @@ void randInput(array<float, MAX_SIZE>& anArray, int& anInt){
             int randVal = (rand() % 100) + 1;
             anArray[ndx] = randVal;
         }
-    ran}
+    }
 }
