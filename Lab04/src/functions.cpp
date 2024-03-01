@@ -137,6 +137,9 @@ void display(array<float, MAX_SIZE>& anArray, int& anInt){
             cout << endl;
         }
     }
+
+    cout << endl;
+
     /*
     if (gradeCount % 5 != 0){
         cout << endl;
