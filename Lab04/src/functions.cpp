@@ -88,7 +88,7 @@ void maxAndMin(array<float, MAX_SIZE>& anArray, int& anInt, float& max, float& m
 }
 
 float standardDev(array<float, MAX_SIZE>& anArray, int& anInt){
-    int inputCount = anInt; // n : number of input #'s
+    float inputCount = anInt; // n : number of input #'s
     float avgOfInputs = 0; // u : avg of inputted data
     float sumOfInputs = 0;
     float sum = 0;
@@ -108,5 +108,45 @@ float standardDev(array<float, MAX_SIZE>& anArray, int& anInt){
     stdDev = sqrt(sum / (anInt - 1));
 
     return stdDev;
+}
+
+/*
+6 grades were entered
+The values are:
+100 90 80 70 60
+50
+The average of the 6 numbers is : 75.0
+The minimum number is : 50
+The maximum number is : 100
+The standard deviation is : 18.708
+*/
+
+void display(array<float, MAX_SIZE>& anArray, int& anInt){
+    int gradeCount = anInt;
+    float maxGrade = 0;
+    float minGrade = 0;
+    maxAndMin(anArray, anInt, maxGrade, minGrade);
+
+    cout << gradeCount << " grades were entered" << endl;
+    cout << "The values are:" << endl;
+
+    for(int ndx = 0; ndx < gradeCount; ndx++){
+        cout << anArray[ndx] << " ";
+
+        if((ndx + 1) % 5 == 0){
+            cout << endl;
+        }
+    }
+
+    if (gradeCount % 5 != 0){
+        cout << endl;
+    }
+
+    cout << "The average of the " << gradeCount << " numbers is : " << average(anArray, anInt) << endl;
+    cout << "The minimum number is : " << minGrade << endl;
+    cout << "The maximum number is : " << maxGrade << endl;
+    cout << "The standard deviation is : " << standardDev(anArray, anInt) << endl;
+
+
 
 }
