@@ -58,6 +58,14 @@ void randInput(array<float, MAX_SIZE>& anArray, int& anInt){
 }
 
 float average(array<float, MAX_SIZE>& anArray, int& anInt){
+    float sum = 0;
+    float avg = 0;
 
-    return 0;
+    for(int ndx = 0; ndx < anInt; ndx++){
+        sum += anArray[ndx];
+    }
+
+    avg = sum/anInt;
+
+    return avg;
 }
