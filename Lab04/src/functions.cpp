@@ -69,3 +69,18 @@ float average(array<float, MAX_SIZE>& anArray, int& anInt){
 
     return avg;
 }
+
+void maxAndMin(array<float, MAX_SIZE>& anArray, int& anInt, float& max, float& min){
+    max = anArray[0];
+    min = anArray[0];
+
+    for (int ndx = 1; ndx < anInt; ndx++){
+        float element = anArray[ndx];
+        if (element < min){
+            min = element;
+        }
+        else if (element > max){
+            max = element;
+        }
+    }
+}
