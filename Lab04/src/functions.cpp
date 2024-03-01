@@ -137,10 +137,11 @@ void display(array<float, MAX_SIZE>& anArray, int& anInt){
             cout << endl;
         }
     }
-
+    /*
     if (gradeCount % 5 != 0){
         cout << endl;
     }
+    */
 
     cout << "The average of the " << gradeCount << " numbers is : " << average(anArray, anInt) << endl;
     cout << "The minimum number is : " << minGrade << endl;
