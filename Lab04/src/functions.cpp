@@ -4,6 +4,8 @@
     using std::cin;
     using std::endl;
 #include <cmath>
+    using std::pow;
+    using std::sqrt;
 #include <array>
 #include <random>
 #include <cstddef>
@@ -83,4 +85,28 @@ void maxAndMin(array<float, MAX_SIZE>& anArray, int& anInt, float& max, float& m
             max = element;
         }
     }
+}
+
+float standardDev(array<float, MAX_SIZE>& anArray, int& anInt){
+    int inputCount = anInt; // n : number of input #'s
+    float avgOfInputs = 0; // u : avg of inputted data
+    float sumOfInputs = 0;
+    float sum = 0;
+    float stdDev = 0; //final answer
+
+    for(int ndx = 0; ndx < anInt; ndx++){
+        sumOfInputs += anArray[ndx];
+    }
+
+    avgOfInputs = sumOfInputs / inputCount;
+
+    for(int ndx = 0; ndx < anInt; ndx++){
+        float element = anArray[ndx];
+        sum += pow(element - avgOfInputs, 2);
+    }
+
+    stdDev = sqrt(sum / (anInt - 1));
+
+    return stdDev;
+
 }
