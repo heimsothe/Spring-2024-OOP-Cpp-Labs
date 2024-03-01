@@ -128,7 +128,7 @@ void display(array<float, MAX_SIZE>& anArray, int& anInt){
     maxAndMin(anArray, anInt, maxGrade, minGrade);
 
     cout << gradeCount << " grades were entered" << endl;
-    cout << "The values are:" << endl;
+    cout << "The values are : " << endl;
 
     for(int ndx = 0; ndx < gradeCount; ndx++){
         cout << anArray[ndx] << " ";
