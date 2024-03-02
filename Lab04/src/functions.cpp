@@ -1,3 +1,19 @@
+/********************************************************
+Name      :  Elijah Heimsoth
+Class     :  CSCI 2312 Section H01
+PA#       :  PA4 Classes and Functions
+Due Date  :  03/01/2024
+*********************************************************
+*********************************************************
+* Summary: This file includes the implementation for the
+* functions protyped in functions.h).
+
+* The functions work with arrays and generate, modify,
+* and display them in different ways.
+
+* Created: 02/29/2024
+********************************************************/
+
 #include <string>
 #include <iostream>
     using std::cout;

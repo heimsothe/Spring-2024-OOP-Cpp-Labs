@@ -1,3 +1,22 @@
+/********************************************************
+Name      :  Elijah Heimsoth
+Class     :  CSCI 2312 Section H01
+PA#       :  PA4 Classes and Functions
+Due Date  :  03/01/2024
+*********************************************************
+*********************************************************
+* Summary: This file includes different tests, verifying
+* the operability of the OrderedPair class and various
+* functions.
+
+* The class works with x and y coordinates with methods
+* to manipulate them in different ways.
+* The functions work with arrays and generate, modify,
+* and display them in different ways.
+
+* Created: 02/29/2024
+********************************************************/
+
 #include <string>
 #include <iostream>
     using std::cout;
@@ -14,7 +33,6 @@
 #include "functions.h"
 
 int main(){
-    /*
     //ORDERED PAIR TESTING
     //Constructors and Setters
     OrderedPair defaultPair;
@@ -67,7 +85,6 @@ int main(){
 
     //powerPair test
     cout << "3^4 = " << pair2.powerPair() << endl;
-    */
 
     //FUNCTIONS TESTING
 
@@ -94,12 +111,9 @@ int main(){
     }
     cout << endl;
 
-    /*
-    //average
-
-    float avg = average(avgArray, 5);
-    cout << "average of avgArray is: " << avg << endl;
-    */
+    //display (also tests average, maxAndMin, and standardDev)
+    int size = 50;
+    display(randArr, size);
 
 
     return 0;

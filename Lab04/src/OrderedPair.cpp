@@ -1,3 +1,19 @@
+/********************************************************
+Name      :  Elijah Heimsoth
+Class     :  CSCI 2312 Section H01
+PA#       :  PA4 Classes and Functions
+Due Date  :  03/01/2024
+*********************************************************
+*********************************************************
+* Summary: This file includes the implementation for the
+* Ordered Pair Class prototyped in OrderedPair.h).
+
+* The class works with x and y coordinates with methods
+* to manipulate them in different ways
+
+* Created: 02/29/2024
+********************************************************/
+
 #include <iostream>
     using std::cout;
     using std::cin;
