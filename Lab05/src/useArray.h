@@ -45,6 +45,8 @@ void sortArray(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength);
 #include <array>
     using std::array;
 
+const int MAX_SIZE = 100;
+
 int howMany();
 void fillArray(array<int, MAX_SIZE>& anEmptyArray, int& aRandNum);
 void printArray(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength);
