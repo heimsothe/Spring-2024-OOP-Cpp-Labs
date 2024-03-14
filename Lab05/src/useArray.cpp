@@ -51,6 +51,10 @@ void sortArray(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength);
     using std::endl;
 #include <random>
 #include <iomanip>
+    using std::setw;
+    using std::setfill;
+    using std::left;
+    using std::right;
 #include <stdexcept>
 
 int howMany(){
@@ -65,8 +69,6 @@ int howMany(){
 
     return userInput;
 }
-
-
 
 
 void fillArray(array<int, MAX_SIZE>& anEmptyArray, int& aRandNum){
@@ -89,8 +91,20 @@ void fillArray(array<int, MAX_SIZE>& anEmptyArray, int& aRandNum){
         }
     }
 }
+
+
+void printArray(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength){
+    for (int ndx = 0; ndx < arrayLength; ndx++){
+        if (ndx % 10 == 0){
+            cout << endl;
+        }
+
+        cout << left << setw(4) << aPopulatedArray[ndx] << " ";
+    }
+}
+
+
 /*
-void printArray(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength);
 bool dupeCheck(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength);
 void sortArray(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength);
 */
