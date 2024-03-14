@@ -51,6 +51,7 @@ void sortArray(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength);
     using std::endl;
 #include <random>
 #include <iomanip>
+#include <stdexcept>
 
 int howMany(){
     int userInput;
@@ -68,6 +69,7 @@ int howMany(){
 
     catch (const char* msg){
         cout << msg << endl;
+        return -1;
     }
 }
 
