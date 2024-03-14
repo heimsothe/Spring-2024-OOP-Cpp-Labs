@@ -62,11 +62,11 @@ int howMany(){
     else{
         return userInput;
     }
-    return 0;
+    //return 0;
 }
 
 void fillArray(array<int, MAX_SIZE>& anEmptyArray, int& aRandNum){
-    
+
 }
 /*
 void printArray(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength);
