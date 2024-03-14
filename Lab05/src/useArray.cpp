@@ -59,15 +59,35 @@ int howMany(){
     cout << "Enter number of elements to generate (0-100): ";
     cin >> userInput;
 
-    if (userInput < 0 || userInput > 100){
+    if (userInput < 1 || userInput > 100){
         throw "The input does not meet the requirements";
     }
 
     return userInput;
 }
 
-void fillArray(array<int, MAX_SIZE>& anEmptyArray, int& aRandNum){
 
+
+
+void fillArray(array<int, MAX_SIZE>& anEmptyArray, int& aRandNum){
+    //anInt is number of random values desired (1-50)
+    //if anInt < 1 || anInt > 100 --> terminate function
+
+    //random values generate must be 1-100 using srand
+
+    //set seed for rand
+    srand(static_cast<unsigned int>(time(0)));
+
+    if (aRandNum < 1 || aRandNum > 100){
+        //terminate
+        return;
+    }
+    else{
+        for (int ndx = 0; ndx < aRandNum; ndx++){
+            int randVal = (rand() % 10000);
+            anEmptyArray[ndx] = randVal;
+        }
+    }
 }
 /*
 void printArray(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength);
