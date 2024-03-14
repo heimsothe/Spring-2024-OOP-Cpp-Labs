@@ -96,6 +96,7 @@ void fillArray(array<int, MAX_SIZE>& anEmptyArray, int& aRandNum){
 void printArray(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength){
     for (int ndx = 0; ndx < arrayLength; ndx++){
         cout << aPopulatedArray[ndx] << " ";
+        
         if ((ndx+1) % 10 == 0){
             cout << endl;
         }
