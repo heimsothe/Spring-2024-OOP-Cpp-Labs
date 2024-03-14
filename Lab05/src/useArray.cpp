@@ -66,9 +66,8 @@ int howMany(){
         return userInput;
     }
 
-    catch (const char* message){
-        cout << message << endl;
-        return -1;
+    catch (const char* msg){
+        cout << "Exception: " << msg << endl;
     }
 }
 
