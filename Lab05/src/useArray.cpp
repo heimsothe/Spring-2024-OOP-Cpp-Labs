@@ -59,7 +59,7 @@ int howMany(){
         cout << "Enter a number 0 to 100: ";
         cin >> userInput;
 
-        if (userInput < 0 || userInput > 100){
+        if (userInput < 1 || userInput > 100){
             throw "The input does not meet the requirements";
         }
 
@@ -67,7 +67,7 @@ int howMany(){
     }
 
     catch (const char* msg){
-        cout << "Exception: " << msg << endl;
+        cout << msg << endl;
     }
 }
 
