@@ -80,11 +80,11 @@ You will create a series of functions to fill an array, print an array, check if
   - `fillArray(array<int,MAX_SIZE>&, int&)`
     - Will receive an empty array of ints passed by reference to be populated with random values, with MAX_SIZE = 100, and an int passed by reference, which is a number between 1 and 100 of random values to generate. If the value is less than 1 or more than 100, the function will terminate without any values being added to the array. The random values must be between 0 and 9999. You must use the srand() method in this function to seed the random values. This function will not return anything
   - `printArray(array<int,MAX_SIZE>&, int&)`
-    - Will receive an empty array of ints passed by reference to be populated with random values, with MAX_SIZE = 100, and an int passed by reference, which is a number between 1 and 100 of random values to generate. It will display the array 10 numbers per row. Each value is delimited by a space. This function will not return anything.
+    - Will receive a populated array of ints passed by reference, and an int of the array length passed by reference. It will display the array 10 numbers per row. Each value is delimited by a space. This function will not return anything.
   - `dupeCheck(array<int,MAX_SIZE>& , int&)`
-    - Will receive an empty array of ints passed by reference to be populated with random values, with MAX_SIZE = 100, and an int passed by reference, which is a number between 1 and 100 of random values to generate. This function will check if the Array Contains any Duplicates.This function return a bool. if array contains any duplicates, return false. Otherwise return true.
+    -  Will receive a populated array of ints passed by reference, and an int of the array length passed by reference. This function will check if the Array Contains any Duplicates.This function return a bool. if array contains any duplicates, return false. Otherwise return true.
   - `sortArray(array<int,MAX_SIZE>&, int&)`
-    - Will receive an empty array of ints passed by reference to be populated with random values, with MAX_SIZE = 100, and an int passed by reference, which is a number between 1 and 100 of random values to generate. This function will arrange the elements of the array in ascending order. This function will not return anything
+    -  Will receive a populated array of ints passed by reference, and an int of the array length passed by reference. This function will arrange the elements of the array in ascending order. This function will not return anything
     - Compare two consecutive elements of the array and swap if the lower indexed element is larger than the smaller indexed element.
 
           Ex.  the array is 3, 2, 1, 4, 6, 9
@@ -150,7 +150,7 @@ You will create a series of functions to fill vectors and diaplay stars. In thes
 <br>
 
 
-3. Create a `main.cpp` file with an `int main()`and use it to test your `OrderedPair` methods. To test the functions, create an empty array of the correct length in main to pass as an argument. `main.cpp` must demonstrate testing of both the `userInput()` and `randInput()` functions with different arrays.
+3. Create a `main.cpp` file with an `int main()`and use it to test these methods. For error handling, use a try-catch block to catch and handle the error in your main.cpp. To test, create arrays of the correct length in main to pass as an argument for the part 1, and create vectors for part 2.
 
 <!-- Important (Yellow) -->
 <div
