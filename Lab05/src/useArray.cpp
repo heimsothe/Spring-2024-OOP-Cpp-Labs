@@ -53,8 +53,25 @@ void sortArray(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength);
 #include <iomanip>
 
 int howMany(){
+    int num;
+    std::cout << "Enter the number of items to generate (1-100): ";
+    std::cin >> num;
+
+    // Check if the input is within the valid range
+    if (num < 1 || num > 100) {
+        throw "The input does not meet the requirements";
+    }
+
+    return num;
+
+    /*
     int userInput;
     cout << "Enter an int 0-100: ";
+    try {
+
+    }
+
+
     cin >> userInput;
     if(userInput < 0 || userInput > 100){
         cout << "The input does not meet the requirements";
@@ -63,6 +80,7 @@ int howMany(){
         return userInput;
     }
     //return 0;
+    */
 }
 
 void fillArray(array<int, MAX_SIZE>& anEmptyArray, int& aRandNum){
