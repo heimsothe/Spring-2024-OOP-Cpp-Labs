@@ -60,7 +60,7 @@ int howMany(){
     cin >> userInput;
 
     if (userInput < 0 || userInput > 100){
-        throw "The input does not mee the requirements";
+        throw "The input does not meet the requirements";
     }
 
     return userInput;
