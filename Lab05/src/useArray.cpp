@@ -99,7 +99,7 @@ void printArray(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength){
             cout << endl;
         }
 
-        cout << left << setw(4) << aPopulatedArray[ndx] << " ";
+        cout << aPopulatedArray[ndx] << " ";
     }
 }
 
