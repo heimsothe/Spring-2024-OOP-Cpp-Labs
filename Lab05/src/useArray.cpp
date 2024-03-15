@@ -105,7 +105,7 @@ void printArray(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength){
 
 
 bool dupeCheck(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength){
-    bool isDupe = true;
+    bool noDupes = true;
     for (int ndx = 0; ndx < arrayLength; ndx++){
         int currElem = aPopulatedArray[ndx];
 
@@ -113,14 +113,30 @@ bool dupeCheck(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength){
             int checkElem = aPopulatedArray[ndx2];
 
             if (currElem == checkElem){
-                isDupe = false;
+                noDupes = false;
             }
         }
     }
-    return isDupe;
+    return noDupes;
 }
 
 
-/*
-void sortArray(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength);
-*/
+void sortArray(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength){
+    bool anySwaps = true;
+
+    while (anySwaps == true){
+        bool anySwaps = false;
+        for (int ndx = 0; ndx < arrayLength - 1; ndx++){
+            int currElem = aPopulatedArray[ndx];
+            int nextElem = aPopulatedArray[ndx+1];
+
+            if(currElem > nextElem){
+                aPopulatedArray[ndx] = nextElem;
+                aPopulatedArray[ndx+1] = currElem;
+                anySwaps = true;
+            }
+            //ndx increments + 1
+        }
+        //checks for anySwaps true/false
+    }
+}
