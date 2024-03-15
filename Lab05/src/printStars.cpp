@@ -53,7 +53,25 @@ int scaleNumber(size_t& generatedNumber, size_t& number){
     while (scaled == 0){
         scaled = (genRandomNumber(number)*2) - number;
     }
-    /*
+return scaled;
+}
+
+void fillVector(vector<int>& intVector, size_t& numberRange, size_t& numberSize){
+    for (int ndx = 0; ndx < numberSize; ndx++){
+        size_t randNum;
+        randNum = genRandomNumber(numberRange);
+        int scaledNum;
+        scaledNum = scaleNumber(randNum, numberRange);
+
+        intVector.push_back(scaledNum);
+    }
+}
+
+
+
+
+    /* FOR SCALE NUMBER
+    #######################
     int scaled;
     scaled = -number + (generatedNumber % (number * 2));
 
@@ -78,9 +96,6 @@ int scaleNumber(size_t& generatedNumber, size_t& number){
         scaleNumber = (genRandomNumber(number) % ((number*2)+1)) - number;
     }
     */
-    return scaled;
 
 
     //(genNum % ((scaleNum*2) +1)) - scaleNum
-
-}
