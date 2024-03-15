@@ -45,3 +45,18 @@ size_t genRandomNumber(size_t& range){
     size_t randNum = (rand() % (range + 1));
     return randNum;
 }
+
+int scaleNumber(size_t& generatedNumber, size_t& number){
+    int scaleNumber;
+    scaleNumber = (generatedNumber % ((number*2)+1)) - number;
+
+    while(scaleNumber == 0){
+        scaleNumber = (genRandomNumber(number) % ((number*2)+1)) - number;
+    }
+
+    return scaleNumber;
+
+
+    //(genNum % ((scaleNum*2) +1)) - scaleNum
+
+}
