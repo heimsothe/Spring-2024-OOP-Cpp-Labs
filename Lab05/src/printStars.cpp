@@ -47,8 +47,14 @@ size_t genRandomNumber(size_t& range){
 }
 
 int scaleNumber(size_t& generatedNumber, size_t& number){
-    int scaleNumber;
-    scaleNumber = static_cast<int>(generatedNumber) - static_cast<int>(number);
+    int scaledNumber;
+    scaledNumber = static_cast<int>(generatedNumber) - static_cast<int>(number);
+    while(scaledNumber == 0) {
+        generatedNumber = genRandomNumber(number);
+        scaledNumber = static_cast<int>(generatedNumber) - static_cast<int>(number);
+    }
+
+
     //int scaleNumber = -number + (generatedNumber * (number - (-number)) / maxOriginalRange);
     //scaleNumber = (generatedNumber % ((number*2)+1)) - number;
     /*
@@ -56,7 +62,7 @@ int scaleNumber(size_t& generatedNumber, size_t& number){
         scaleNumber = (genRandomNumber(number) % ((number*2)+1)) - number;
     }
     */
-    return scaleNumber;
+    return scaledNumber;
 
 
     //(genNum % ((scaleNum*2) +1)) - scaleNum
