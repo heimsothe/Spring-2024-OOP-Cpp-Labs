@@ -58,6 +58,7 @@ void sortArray(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength);
 #include <stdexcept>
 
 int howMany(){
+    /*
     int userInput;
 
     cout << "Enter number of elements to generate (0-100): ";
@@ -68,7 +69,23 @@ int howMany(){
     }
 
     return userInput;
+    */
+
+   int userInput;
+   cout << "Enter number of elements to generate (1-100): ";
+   cin >> userInput;
+   try {
+        if (userInput > 100 || userInput < 1){
+            throw ("The input does not meet the requirements");
+        }
+   }
+   catch (const char* msg){
+        cout << msg << endl;
+    }
+
+    return userInput;
 }
+
 
 
 void fillArray(array<int, MAX_SIZE>& anEmptyArray, int& aRandNum){
