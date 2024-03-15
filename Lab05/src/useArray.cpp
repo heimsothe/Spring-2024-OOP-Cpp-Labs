@@ -125,7 +125,7 @@ void sortArray(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength){
     bool anySwaps = true;
 
     while (anySwaps == true){
-        bool anySwaps = false;
+        anySwaps = false;
         for (int ndx = 0; ndx < arrayLength - 1; ndx++){
             int currElem = aPopulatedArray[ndx];
             int nextElem = aPopulatedArray[ndx+1];
