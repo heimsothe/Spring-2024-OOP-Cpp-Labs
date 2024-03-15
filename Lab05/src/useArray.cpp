@@ -109,7 +109,7 @@ bool dupeCheck(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength){
     for (int ndx = 0; ndx < arrayLength; ndx++){
         int currElem = aPopulatedArray[ndx];
 
-        for (int ndx2 = ndx+1; ndx2 < arrayLength; ndx++){
+        for (int ndx2 = ndx+1; ndx2 < arrayLength; ndx2++){
             int checkElem = aPopulatedArray[ndx2];
 
             if (currElem == checkElem){
