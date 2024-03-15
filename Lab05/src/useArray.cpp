@@ -45,6 +45,7 @@ void sortArray(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength);
 #include <array>
     using std::array;
 #include <string>
+    using std::string;
 #include <iostream>
     using std::cout;
     using std::cin;
@@ -79,7 +80,7 @@ int howMany(){
             throw ("The input does not meet the requirements");
         }
    }
-   catch (const char* msg){
+   catch (char const* msg){
         cout << msg << endl;
     }
 
