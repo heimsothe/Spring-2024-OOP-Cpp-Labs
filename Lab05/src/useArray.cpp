@@ -60,17 +60,22 @@ void sortArray(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength);
 
 int howMany(){
     /*
+    //THIS CODE BLOCK WORKS BUT FAILS AUTOGRADER.
+
     int userInput;
 
     cout << "Enter number of elements to generate (0-100): ";
     cin >> userInput;
-
-    if (userInput < 1 || userInput > 100){
-        throw "The input does not meet the requirements";
+    try {
+        if (userInput < 1 || userInput > 100){
+            throw "The input does not meet the requirements";
     }
-
+    catch (const char* msg){
+        cout << msg << endl;
+    }
     return userInput;
     */
+   
     int userInput;
     cout << "Enter number of elements to generate (1-100): ";
     cin >> userInput;
