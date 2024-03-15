@@ -96,7 +96,7 @@ void fillArray(array<int, MAX_SIZE>& anEmptyArray, int& aRandNum){
 void printArray(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength){
     for (int ndx = 0; ndx < arrayLength; ndx++){
         cout << aPopulatedArray[ndx] << " ";
-        
+
         if ((ndx+1) % 10 == 0){
             cout << endl;
         }
@@ -104,7 +104,23 @@ void printArray(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength){
 }
 
 
+bool dupeCheck(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength){
+    bool isDupe = true;
+    for (int ndx = 0; ndx < arrayLength; ndx++){
+        int currElem = aPopulatedArray[ndx];
+
+        for (int ndx2 = ndx+1; ndx2 < arrayLength; ndx++){
+            int checkElem = aPopulatedArray[ndx2];
+
+            if (currElem == checkElem){
+                isDupe = false;
+            }
+        }
+    }
+    return isDupe;
+}
+
+
 /*
-bool dupeCheck(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength);
 void sortArray(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength);
 */
