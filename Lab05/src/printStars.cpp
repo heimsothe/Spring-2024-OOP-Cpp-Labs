@@ -28,3 +28,13 @@ size_t getNumberRange(){
     }
     return range;
 }
+
+size_t getNumberSize(){
+    size_t size;
+    cout << "Enter how many numbers to generate: ";
+    cin >> size;
+    if(size > 100 || size <= 0){
+        throw "The input does not meet the requirements";
+    }
+    return size;
+}
