@@ -75,7 +75,7 @@ int howMany(){
    cout << "Enter number of elements to generate (1-100): ";
    cin >> userInput;
    try {
-        if (userInput > 100 || userInput < 1){
+        if (userInput > 100){
             throw ("The input does not meet the requirements");
         }
    }
