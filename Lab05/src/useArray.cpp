@@ -71,19 +71,12 @@ int howMany(){
 
     return userInput;
     */
-
-   int userInput;
-   cout << "Enter number of elements to generate (1-100): ";
-   cin >> userInput;
-   try {
-        if (userInput > 100){
-            throw ("The input does not meet the requirements");
-        }
-   }
-   catch (char const* msg){
-        cout << msg << endl;
+    int userInput;
+    cout << "Enter number of elements to generate (1-100): ";
+    cin >> userInput;
+    if (userInput > 100){
+        throw ("The input does not meet the requirements");
     }
-
     return userInput;
 }
 
