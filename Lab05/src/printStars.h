@@ -44,6 +44,8 @@ void sortArray(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength);
 
 #include <vector>
     using std::vector;
+#include <ctime>
+#include <cstdlib>
 
 size_t getNumberRange();
 size_t getNumberSize();
