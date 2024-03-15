@@ -24,7 +24,7 @@ size_t getNumberRange(){
     cout << "Enter a positive number to set the range: ";
     cin >> range;
     if (range < 0 || range == 0){
-        throw "The input does not mee the requirements";
+        throw "The input does not meet the requirements";
     }
     return range;
 }
