@@ -48,8 +48,19 @@ size_t genRandomNumber(size_t& range){
 
 int scaleNumber(size_t& generatedNumber, size_t& number){
     int scaled;
+    scaled = (generatedNumber*2) - number;
+
+    while (scaled == 0){
+        scaled = (genRandomNumber(number)*2) - number;
+    }
+    /*
+    int scaled;
     scaled = -number + (generatedNumber % (number * 2));
 
+    while(scaled == 0){
+        scaled = -number + (genRandomNumber(number) % (number * 2));
+    }
+    */
 
     /*
     int scaledNumber;
