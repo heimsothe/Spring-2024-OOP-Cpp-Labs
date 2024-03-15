@@ -67,6 +67,38 @@ void fillVector(vector<int>& intVector, size_t& numberRange, size_t& numberSize)
     }
 }
 
+void printStars(vector<int>& intVector){
+    int index;
+    cout << "Enter an index: ";
+    cin >> index;
+
+    while(index >= 0 && index <= intVector.size()){
+        if(intVector[index] >= 0){
+            cout << " ";
+            for (int ndx = 0; ndx < intVector[index]; ndx ++){
+                cout << "* ";
+            }
+            //cout << " " << string(intVector[index], '* ') << endl;
+        }
+        else if(intVector[index] < 0){
+            cout << "*";
+            for (int ndx = 0; ndx < intVector[index]; ndx ++){
+                cout << " *";
+            }
+            //cout << "*" << string(intVector[index], ' *') << endl;
+        }
+
+        cout << "Enter another index (0 - QUIT): ";
+        cin >> index;
+        if(index == 0){
+            break;
+        }
+    }
+
+
+
+
+}
 
 
 
