@@ -57,9 +57,10 @@ return scaled;
 }
 
 void fillVector(vector<int>& intVector, size_t& numberRange, size_t& numberSize){
-    size_t randNum;
-    int scaledNum;
+
     for (int ndx = 0; ndx < numberSize; ndx++){
+        size_t randNum;
+        int scaledNum;
         randNum = genRandomNumber(numberRange);
         scaledNum = scaleNumber(randNum, numberRange);
 
