@@ -1,3 +1,18 @@
+/********************************************************
+Name      :  Elijah Heimsoth
+Class     :  CSCI 2312 Section H01
+PA#       :  PA5
+Due Date  :  03/01/2024
+*********************************************************
+*********************************************************
+* Summary: This file includes the testing program for the
+* functions prototyped in useArray.h).
+
+* The functions work with arrays and populate, modify,
+* and display them in different ways.
+
+* Created: 03/14/2024
+********************************************************/
 #include "useArray.h"
 #include <array>
     using std::array;
