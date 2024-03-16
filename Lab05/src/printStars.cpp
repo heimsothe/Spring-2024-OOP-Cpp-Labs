@@ -90,6 +90,7 @@ void printStars(vector<int>& intVector){
         cout << endl;
         cout << "Enter another index (0 - QUIT): ";
         cin >> index;
+        cout << endl;
         if(index == 0){
             break;
         }
