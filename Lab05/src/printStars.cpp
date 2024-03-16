@@ -43,13 +43,14 @@ size_t getNumberSize(){
 
 
 size_t genRandomNumber(size_t& range){
-    //set seed for rand only once
+    srand(static_cast<unsigned int>(time(0)));
+    /*set seed for rand only once
     static bool seeded = false;
-    //srand(static_cast<unsigned int>(time(0)));
     if (seeded == false){
         srand(static_cast<unsigned int>(time(0)));
         seeded = true;
     }
+    */
     size_t randNum = (rand() % (range + 1));
     return randNum;
 }
