@@ -19,6 +19,7 @@
 #include <ctime>
 #include <cstdlib>
 
+
 size_t getNumberRange(){
     size_t range;
     cout << "Enter a positive number to set the range: ";
@@ -32,16 +33,23 @@ size_t getNumberRange(){
 size_t getNumberSize(){
     size_t size;
     cout << "Enter how many numbers to generate: ";
-    cin >> size; 
+    cin >> size;
     if(size > 100 || size <= 0){
         throw "The input does not meet the requirements";
     }
     return size;
 }
 
+
+
 size_t genRandomNumber(size_t& range){
-    //set seed for rand
+    //set seed for rand only once
+    static bool seeded = false;
     //srand(static_cast<unsigned int>(time(0)));
+    if (seeded == false){
+        srand(static_cast<unsigned int>(time(0)));
+        seeded = true;
+    }
     size_t randNum = (rand() % (range + 1));
     return randNum;
 }
