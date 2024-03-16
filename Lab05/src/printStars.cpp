@@ -69,7 +69,7 @@ void fillVector(vector<int>& intVector, size_t& numberRange, size_t& numberSize)
 
 void printStars(vector<int>& intVector){
     int index;
-    cout << "Enter an index: ";
+    //cout << "Enter an index: ";
     cin >> index;
 
     while(index >= 0 && index <= intVector.size()){
@@ -88,7 +88,7 @@ void printStars(vector<int>& intVector){
             //cout << "*" << string(intVector[index], ' *') << endl;
         }
         cout << endl;
-        cout << "Enter another index (0 - QUIT): ";
+        //cout << "Enter another index (0 - QUIT): ";
         cin >> index;
         cout << endl;
         if(index == 0){
