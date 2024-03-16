@@ -20,6 +20,22 @@
 #include <cstdlib>
 
 int main(){
+    vector<int> myVec;
+    size_t numRange = 20;
+    size_t numSize = 10;
+    fillVector(myVec, numRange, numSize);
+
+    for(int i = 0; i < myVec.size(); i++){
+        cout << myVec[i] << " ";
+    }
+    cout << endl;
+
+    printStars(myVec);
+
+    return 0;
+
+
+    /*
     size_t userRange = getNumberRange();
 
     size_t genNum = genRandomNumber(userRange);
@@ -35,4 +51,5 @@ int main(){
     cout << "Scaled Number in range [-" << numScale << ", +" << numScale << "]: " << scaledNumber << endl;
 
     return 0;
+    */
 }

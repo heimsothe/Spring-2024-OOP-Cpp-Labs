@@ -57,10 +57,10 @@ return scaled;
 }
 
 void fillVector(vector<int>& intVector, size_t& numberRange, size_t& numberSize){
+    size_t randNum;
+    int scaledNum;
     for (int ndx = 0; ndx < numberSize; ndx++){
-        size_t randNum;
         randNum = genRandomNumber(numberRange);
-        int scaledNum;
         scaledNum = scaleNumber(randNum, numberRange);
 
         intVector.push_back(scaledNum);
@@ -82,7 +82,7 @@ void printStars(vector<int>& intVector){
         }
         else if(intVector[index] < 0){
             cout << "*";
-            for (int ndx = 0; ndx < intVector[index]; ndx ++){
+            for (int ndx = 0; ndx < (-1 * intVector[index]); ndx ++){
                 cout << " *";
             }
             //cout << "*" << string(intVector[index], ' *') << endl;
