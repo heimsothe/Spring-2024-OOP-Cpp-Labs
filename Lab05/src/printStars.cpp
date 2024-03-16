@@ -87,7 +87,7 @@ void printStars(vector<int>& intVector){
             }
             //cout << "*" << string(intVector[index], ' *') << endl;
         }
-        cout << endl;
+        //cout << endl;
         //cout << "Enter another index (0 - QUIT): ";
         cin >> index;
         cout << endl;
