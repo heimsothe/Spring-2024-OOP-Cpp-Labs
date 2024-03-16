@@ -20,6 +20,7 @@
 #include <cstdlib>
 
 int main(){
+    srand(static_cast<unsigned int>(time(0)));
     size_t numRange = getNumberRange();
     cout << "Entered range is 0-" << numRange << endl;
     size_t numSize = getNumberSize();

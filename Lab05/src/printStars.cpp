@@ -41,7 +41,7 @@ size_t getNumberSize(){
 
 size_t genRandomNumber(size_t& range){
     //set seed for rand
-    srand(static_cast<unsigned int>(time(0)));
+    //srand(static_cast<unsigned int>(time(0)));
     size_t randNum = (rand() % (range + 1));
     return randNum;
 }
