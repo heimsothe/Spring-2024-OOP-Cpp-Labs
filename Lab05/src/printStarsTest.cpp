@@ -20,19 +20,34 @@
 #include <cstdlib>
 
 int main(){
-    vector<int> myVec;
-    size_t numRange = 20;
-    size_t numSize = 10;
-    fillVector(myVec, numRange, numSize);
+    size_t numRange = getNumberRange();
+    cout << "Entered range is 0-" << numRange << endl;
+    size_t numSize = getNumberSize();
+    cout << "Quanity to generate entered: " << numSize;
+    cout << endl;
 
+    size_t genNum = genRandomNumber(numRange);
+    cout << "Random number 1-" << numRange << ": " << genNum << endl;
+    cout << endl;
+
+    int scaledNum = scaleNumber(genNum, numRange);
+    cout << genNum << ", [0, " << numRange << "] scaled to [" << -1*static_cast<int>(numRange) << ", " << numRange << "]: "
+         << scaledNum << endl;
+    cout << endl;
+
+    vector<int> myVec;
+    cout << "myVec VECTOR: " << endl;
+    fillVector(myVec, numRange, numSize);
     for(int i = 0; i < myVec.size(); i++){
-        cout << myVec[i] << " ";
+        cout << setw(6) << myVec[i] << " ";
     }
+    cout << endl;
     cout << endl;
 
     printStars(myVec);
 
     return 0;
+
 
 
     /*
