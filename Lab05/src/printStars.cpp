@@ -32,7 +32,7 @@ size_t getNumberRange(){
 size_t getNumberSize(){
     size_t size;
     cout << "Enter how many numbers to generate: ";
-    cin >> size;
+    cin >> size; 
     if(size > 100 || size <= 0){
         throw "The input does not meet the requirements";
     }
