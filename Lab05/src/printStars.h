@@ -6,40 +6,43 @@ Due Date  :  03/01/2024
 *********************************************************
 *********************************************************
 * Summary: This file includes the prototyping for the
-* functions implemented in useArray.cpp).
+* functions implemented in printStars.cpp).
 
-* The functions work with arrays and populate, modify,
-* and display them in different ways.
+* The functions work vectors, numbers, and user input
 
 * Created: 03/14/2024
 ********************************************************/
 
 /* FUNCTION DESCRIPTIONS:
 
-int howMany();
+size_t getNumberRange();
 //receives nothing
-//returns an int entered from the keyboard
+//returns an size_t number entered from the keyboard, represents range 0-number
 
-void fillArray(array<int, MAX_SIZE>& anEmptyArray, int& aRandNum);
-//receives an empty array of ints, and a random int 1-100 (x)
-//populates array with x number of random ints between 0 and 9999
-//returns nothing
+size_t getNumberSize();
+//receives nothing
+//returns an size_t number entered from the keyboard, represents quantity to generate
 
-void printArray(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength);
-//receives populated array of ints, and int of the array length
+size_t genRandomNumber(size_t&);
+//receives size_t range ( 0 to range) by reference
 //displays the array 10 numbers per row, each delimitted by a space
+//returns an size_t number randomly generated between 0 and range.
+
+int scaleNumber(size_t&, size_t&);
+//receives randomly generated size_t number by reference, and size_t range by reference
+//scales random number from [0, range] to [-range, +range]
+//while the scaled number is 0, regenerates random number in range until non-zero
+//returns scaled number
+
+void fillVector(vector<int>&, size_t&, size_t&);
+//receives an empt vector of ints by reference, size_t range by reference, and size_t size by reference
+//fills the vector with size number elements, with random generated values between [-range, +range]
 //returns nothing
 
-bool dupeCheck(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength);
-//receives populated array of ints, and int of the array length
-//checks array for any duplicates
-//returns boolean true or false of whether duplicate exists
-
-void sortArray(array<int, MAX_SIZE>& aPopulatedArray, int& arrayLength);
-//receives a populated array of ints, and int of the array length
-//arranges elements of the array in ascending numerical order
+void printStars(vector<int>&);
+//receives a populated vector of ints by reference
+//accesses and prints element in form of "*"s and " "s based on user input index
 //returns nothing
-
 */
 
 #include <vector>

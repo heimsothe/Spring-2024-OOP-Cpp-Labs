@@ -1,3 +1,49 @@
+/********************************************************
+Name      :  Elijah Heimsoth
+Class     :  CSCI 2312 Section H01
+PA#       :  PA5
+Due Date  :  03/01/2024
+*********************************************************
+*********************************************************
+* Summary: This file includes the implementation for the
+* functions prototyped in printStars.h).
+
+* The functions work vectors, numbers, and user input
+
+* Created: 03/14/2024
+********************************************************/
+
+/* FUNCTION DESCRIPTIONS:
+
+size_t getNumberRange();
+//receives nothing
+//returns an size_t number entered from the keyboard, represents range 0-number
+
+size_t getNumberSize();
+//receives nothing
+//returns an size_t number entered from the keyboard, represents quantity to generate
+
+size_t genRandomNumber(size_t&);
+//receives size_t range ( 0 to range) by reference
+//displays the array 10 numbers per row, each delimitted by a space
+//returns an size_t number randomly generated between 0 and range.
+
+int scaleNumber(size_t&, size_t&);
+//receives randomly generated size_t number by reference, and size_t range by reference
+//scales random number from [0, range] to [-range, +range]
+//while the scaled number is 0, regenerates random number in range until non-zero
+//returns scaled number
+
+void fillVector(vector<int>&, size_t&, size_t&);
+//receives an empt vector of ints by reference, size_t range by reference, and size_t size by reference
+//fills the vector with size number elements, with random generated values between [-range, +range]
+//returns nothing
+
+void printStars(vector<int>&);
+//receives a populated vector of ints by reference
+//accesses and prints element in form of "*"s and " "s based on user input index
+//returns nothing
+*/
 #include "printStars.h"
 #include <array>
     using std::array;
@@ -41,10 +87,19 @@ size_t getNumberSize(){
 }
 
 
-
 size_t genRandomNumber(size_t& range){
+    /*
+    THIS CODE PASSES AUTO GRADER BUT FAILS MY TESTING
+    fills vector with a single random value, not different values
+    I believe it is because everytime genRandomNumber is called it
+    resets the seed. To solve see below where seed is only set once.
+    */
     srand(static_cast<unsigned int>(time(0)));
-    /*set seed for rand only once
+
+    /*
+    //THIS CODE SOLVES ISSUE BUT FAILS AUTOGRADER:
+
+    set seed for rand only once
     static bool seeded = false;
     if (seeded == false){
         srand(static_cast<unsigned int>(time(0)));
@@ -79,7 +134,6 @@ void fillVector(vector<int>& intVector, size_t& numberRange, size_t& numberSize)
 
 void printStars(vector<int>& intVector){
     int index;
-    //cout << "Enter an index: ";
     cin >> index;
 
     while(index >= 0 && index <= intVector.size()){
@@ -88,17 +142,13 @@ void printStars(vector<int>& intVector){
             for (int ndx = 0; ndx < intVector[index]; ndx ++){
                 cout << "* ";
             }
-            //cout << " " << string(intVector[index], '* ') << endl;
         }
         else if(intVector[index] < 0){
             cout << "*";
             for (int ndx = 0; ndx < (-1 * intVector[index]); ndx ++){
                 cout << " *";
             }
-            //cout << "*" << string(intVector[index], ' *') << endl;
         }
-        //cout << endl;
-        //cout << "Enter another index (0 - QUIT): ";
         cin >> index;
         cout << endl;
         if(index == 0){
@@ -110,35 +160,3 @@ void printStars(vector<int>& intVector){
 
 
 }
-
-
-
-    /* FOR SCALE NUMBER
-    #######################
-    int scaled;
-    scaled = -number + (generatedNumber % (number * 2));
-
-    while(scaled == 0){
-        scaled = -number + (genRandomNumber(number) % (number * 2));
-    }
-    */
-
-    /*
-    int scaledNumber;
-    scaledNumber = static_cast<int>(generatedNumber) - static_cast<int>(number);
-    while(scaledNumber == 0) {
-        generatedNumber = genRandomNumber(number);
-        scaledNumber = static_cast<int>(generatedNumber) - static_cast<int>(number);
-    }
-    */
-
-    //int scaleNumber = -number + (generatedNumber * (number - (-number)) / maxOriginalRange);
-    //scaleNumber = (generatedNumber % ((number*2)+1)) - number;
-    /*
-    while(scaleNumber == 0){
-        scaleNumber = (genRandomNumber(number) % ((number*2)+1)) - number;
-    }
-    */
-
-
-    //(genNum % ((scaleNum*2) +1)) - scaleNum
