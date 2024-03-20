@@ -332,13 +332,6 @@ classDiagram
 
 6. Create a `main.cpp` file with an `int main()` and use it to test your code.
 
-### Specifications
-
-- The `main.cpp` should have a menu asking if the user wishes to Enter a person, ENter a new pet, modify a pet, Delete a pet.
-- To make life easier for your client all letters will be stored in uppercase regardless of how they are entered.
-- It is strongly recommended that you make your classes friends.
-- <strong> Extra Credit: (10pts) </strong> Add the ability to modify a pet or address. This must be a function outside the classes. It can be a friend function.
-
 <!-- Important (Yellow) -->
 <div
     style="background-color: #FEF9C3; border-left: 6px solid #F59E0B; color: #854D0E; padding: 16px;  border-radius: 5px;">
@@ -346,6 +339,14 @@ classDiagram
     <b style="display: inline; margin-bottom: 8px; font-size: 16px;">Important!</b>
     <p>Failure to complete this step may result in a loss of points!</p>
 </div>
+
+### Specifications
+
+- The `main.cpp` should have a menu asking if the user wishes to Enter a person, ENter a new pet, modify a pet, Delete a pet.
+- To make life easier for your client all letters will be stored in uppercase regardless of how they are entered.
+- It is strongly recommended that you make your classes friends.
+- <strong> Extra Credit: (10pts) </strong> Add the ability to modify a pet or address. This must be a function outside the classes. It can be a friend function.
+
 
 ### Hint: Converting a string to upper-case
 
