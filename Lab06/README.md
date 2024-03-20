@@ -339,6 +339,14 @@ classDiagram
 - It is strongly recommended that you make your classes friends.
 - <strong> Extra Credit: (10pts) </strong> Add the ability to modify a pet or address. This must be a function outside the classes. It can be a friend function.
 
+<!-- Important (Yellow) -->
+<div
+    style="background-color: #FEF9C3; border-left: 6px solid #F59E0B; color: #854D0E; padding: 16px;  border-radius: 5px;">
+    <i class="fa-solid fa-exclamation" style="margin-right: 10px;"></i>
+    <b style="display: inline; margin-bottom: 8px; font-size: 16px;">Important!</b>
+    <p>Failure to complete this step may result in a loss of points!</p>
+</div>
+
 ### Hint: Converting a string to upper-case
 
 The function `transform` allows for coverting a string to upper-case. You need to include `<algorithm>` library to use `transform`.
@@ -356,13 +364,6 @@ will update `name` as
 JOHN DOE
 ```
 
-<!-- Important (Yellow) -->
-<div
-    style="background-color: #FEF9C3; border-left: 6px solid #F59E0B; color: #854D0E; padding: 16px;  border-radius: 5px;">
-    <i class="fa-solid fa-exclamation" style="margin-right: 10px;"></i>
-    <b style="display: inline; margin-bottom: 8px; font-size: 16px;">Important!</b>
-    <p>Failure to complete this step may result in a loss of points!</p>
-</div>
 
 ## Testing 
 
