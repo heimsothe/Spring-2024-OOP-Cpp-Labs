@@ -205,11 +205,11 @@ BREED        :              <breed>
 }%%
 classDiagram
     class Date {
-        - month : unsigned int
-        - day : unsigned int
-        - year : unsigned int
-        - checkDay(int) : unsigned int
-        + monthsPerYear : static const int
+        - month unsigned int
+        - day unsigned int
+        - year unsigned int
+        - checkDay(int) unsigned int
+        + monthsPerYear static const int
         + Date( int = 1, int = 1, int = 1900 )
         + ~Date()
         + dateString() std::string
