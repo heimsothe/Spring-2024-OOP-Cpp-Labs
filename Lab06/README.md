@@ -330,24 +330,7 @@ classDiagram
 </div>
 <br>
 
-6. Create a `main.cpp` file with an `int main()` and use it to test your code. 
-
-### Hint: Converting a string to upper-case
-
-The function `transform` allows for coverting a string to upper-case. You need to include <algorithm> to use `transform`.
-
-For example,
-
-```cpp
-string name = "John Doe"
-transform(name.begin(), name.end(), name.begin(), toupper);
-```
-
-will update name as 
-
-```cpp
-JOHN DOE
-```
+6. Create a `main.cpp` file with an `int main()` and use it to test your code.
 
 ### Specifications
 
@@ -355,6 +338,23 @@ JOHN DOE
 - To make life easier for your client all letters will be stored in uppercase regardless of how they are entered.
 - It is strongly recommended that you make your classes friends.
 - <strong> Extra Credit: (10pts) </strong> Add the ability to modify a pet or address. This must be a function outside the classes. It can be a friend function.
+
+### Hint: Converting a string to upper-case
+
+The function `transform` allows for coverting a string to upper-case. You need to include `<algorithm>` library to use `transform`.
+
+For example,
+
+```cpp
+string name = "John Doe";
+transform(name.begin(), name.end(), name.begin(), toupper);
+```
+
+will update `name` as 
+
+```cpp
+JOHN DOE
+```
 
 <!-- Important (Yellow) -->
 <div
