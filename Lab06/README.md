@@ -332,6 +332,23 @@ classDiagram
 
 6. Create a `main.cpp` file with an `int main()` and use it to test your code. 
 
+### Hint: Converting a string to upper-case
+
+The function `transform` allows for coverting a string to upper-case. You need to include <algorithm> to use `transform`.
+
+For example,
+
+```cpp
+string name = "John Doe"
+transform(name.begin(), name.end(), name.begin(), toupper);
+```
+
+will update name as 
+
+```cpp
+JOHN DOE
+```
+
 ### Specifications
 
 - The `main.cpp` should have a menu asking if the user wishes to Enter a person, ENter a new pet, modify a pet, Delete a pet.
