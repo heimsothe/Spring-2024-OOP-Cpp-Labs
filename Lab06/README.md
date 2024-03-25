@@ -158,7 +158,7 @@ BREED        :              <breed>
       - a `public` function called `addPet` which takes no parameters and returns nothing.
            - The function will create a `Pet` object dynamically.
            - Then the member variables of the `Pet` object will be set through user-input (using the `overloaded >>` operator defined for `Pet` object will be easier).
-           - If a `Pet` with same name is not present in the `pets` vector, then the pointer to the updated `Pet` object will be pushed into the `pets` vector using the `overloaded +` operator. Otherwise, throw an exception of type const char* with message: `"Pet with same name already exists."`.
+           - If a `Pet` with same name is not present in the `pets` vector, then the pointer to the updated `Pet` object will be pushed into the `pets` vector using the `overloaded +` operator. Otherwise, throw an exception of type const char* with message: `"Pet with same name already exists."`. In other words, throw the message string by itself without an exception wrapper (like std::invalid_argument).
            - An `overloaded +` operator, which will be a friend of `Person` class, pushes a pointer to `Pet` object into the `pets` vector. The `operator+` function takes `vector<Pet*>` (for `pets` vector) and `Pet*` (for Pet to add) as input and returns nothing.
       - a `public` function called `deletePet` which takes no parameters and returns nothing.
            - The function will ask the user to input the name of the `Pet` to be deleted. user-input should be converted to <strong>upper-case</strong> as all strings will be in upper-case.
@@ -265,7 +265,7 @@ classDiagram
         - type : std::string
         - breed : std::string
         + Pet()
-        + Pet(const std::string&, const Date&, const std::string&, const std::string&)
+        + Pet(const std::string&, const Date&, const int&, const std::string&)
         + getName() std::string
         + getDOB() Date
         + getType() std::string
@@ -313,8 +313,8 @@ classDiagram
 
         + operator+(vector<Pet*>&, Pet*) void : friend
         + operator-(vector<Pet*>&, const string&) void : friend
-        + operator<<(ostream&, Address&) : ostream& : friend
-        + operator>>(istream&, Address&) : istream& : friend
+        + operator<<(ostream&, Person&) : ostream& : friend
+        + operator>>(istream&, Person&) : istream& : friend
 
         + searchPet(const string&) bool
         + addPet() void
