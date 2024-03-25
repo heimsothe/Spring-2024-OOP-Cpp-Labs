@@ -271,7 +271,7 @@ classDiagram
         + getType() std::string
         + getBreed() std::string
         + setName(const std::string&) void
-        + setDate(const int&, const Date&, const int&, const string&) void
+        + setDate(const int&, const int&, const int&) void
         + setType(const int&) void
         + setBreed(const std::string&) void
 
