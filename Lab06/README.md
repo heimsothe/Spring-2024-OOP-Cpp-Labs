@@ -65,6 +65,15 @@ In this assignment, we take a look at pointers, classes (Has-A relationship) and
 
 <br>
 
+<!-- Warning (Red) -->
+<div
+    style="background-color: #FEF2F2; border-left: 6px solid #EF4444; color: #991B1B; padding: 16px; border-radius: 5px;">
+    <i class="fa-solid fa-fire-flame-curved" style="margin-right: 10px;"></i>
+    <b style="display: inline; margin-bottom: 8px; font-size: 16px;">Warning:</b>
+    <p>You <strong>must not</strong> implement any inline functions in the header files for this assignment. The autograder is configured to look for all function implementations in the <code>.cpp</code> files. It will not be able to find them if they are in the <code>.h</code> files.</p>
+</div>
+
+
 ## Vet's Office
 
 1. In the `src` directory, create `.cpp` and `.h` files for the `Address`, `Pet` and `Person` classes. 
@@ -96,6 +105,14 @@ In this assignment, we take a look at pointers, classes (Has-A relationship) and
       - All `string` variables will have values stored in <strong>upper-case</strong> only.
       -  The `operator>>` function takes `istream&` (for `cin`) and `Address&` (for `Address` object ) as parameters and returns `istream&` (for `cin`). It will be declared as a `friend` of `Address` class.
       - The `overloaded >>` operator sets the values for all member variables using user input.
+         The Autograder will send inputs in the following sequence. A new line indicates that the enter/return key has been pressed:
+         ```
+         <STREET>
+         <CITY>
+         <STATE>
+         <ZIPCODE>
+         ```
+         **Be extra careful managing your input stream!**
       - The `operator<<` function takes `ostream&` (for `cout`) and `Address&` (for `Address` object ) as parameters and returns `ostream&` (for `cout`). The `overloaded <<` operator displays the `Address` object in format specified below.  It will be declared as a `friend` of `Address` class.
          - the output must match the following format exactly! What is between the <> will be your member variables. Do not include the <> characters in your output. Be sure to end each line.
          - The left side of the ':' will be a field of 13 characters, then the colon character ':', then a field of 21 characters for a total of 35 characters.
@@ -125,6 +142,17 @@ ZIP CODE     :                <zip>
          - If any other values are passed as input (default), then the type will be specified by user-input.
       - The `operator>>` function takes `istream&` (for `cin`) and `Pet&` (for `Pet` object ) as parameters and returns `istream&` (for `cin`).
       - The `overloaded >>` operator sets the values for all member variables using user input.  It will be declared as a `friend` of `Pet` class.
+        The Autograder will send inputs in the following sequence. A new line indicates that the enter/return key has been pressed:
+         ```
+         <NAME>
+         <MONTH>
+         <DAY>
+         <YEAR>
+         <TYPENUM>
+         <TYPENAME> // *only* if TYPENUM isn't 1-4!
+         <BREED>
+         ```
+         **Be extra careful managing your input stream!**
        - The `operator<<` function takes `ostream&` (for `cout`) and `Pet&` (for `Pet` object ) as parameters and returns `ostream&` (for `cout`). The `overloaded <<` operator displays the `Pet` object in format specified below.  It will be declared as a `friend` of `Pet` class.
          - the output must match the following format exactly! What is between the <> will be your member variables. Do not include the <> characters in your output. Be sure to end each line.
          - The left side of the ':' will be a field of 13 characters, then the colon character ':', then a field of 21 characters for a total of 35 characters.
@@ -148,10 +176,21 @@ BREED        :              <breed>
      - a parameterized constructor that takes first name and last name as parameters to create a `Person` object.
    - **Member Functions/Methods**
       - Getters & Setters (aka Mutators & Accessors) for each member variable [11 in total].
-        - Setters will be implemented for each member variable of `Address` class as well. 
+        - Setters will be implemented for each member variable of `Address` class as well.
+        - Notice that in setDOB(), you will using parameters to build a new Address but in the constructor, a Date object itself will be passed.
       - All `string` variables will have values stored in <strong>upper-case</strong> only.
       - The `operator>>` function takes `istream&` (for `cin`) and `Person&` (for `Person` object ) as parameters and returns `istream&` (for `cin`). It will be declared as a `friend` of `Person` class.
         - The `overloaded >>` operator sets the values for first name, last name and address using user input.
+          The Autograder will send inputs in the following sequence. A new line indicates that the enter/return key has been pressed:
+         ```
+         <FNAME>
+         <LNAME>
+         <STREET>
+         <CITY>
+         <STATE>
+         <ZIPCODE>
+         ```
+         **Be extra careful managing your input stream!**
       - a `public` function called `searchPet` which takes a `string` as a parameter and returns a `bool` value.
            - The `string` parameter specifies the name of the `Pet` to search for.
            - The function will search the `pets` vector and returns `true` if a `Pet` with the provided name is found. Else, returns `false`.   
@@ -169,6 +208,7 @@ BREED        :              <breed>
          - The left side of the ':' will be a field of 13 characters, then the colon character ':', then a field of 21 characters for a total of 35 characters.
          - `Address` and `Pet` can be displayed using the `overloaded <<` operators implemented for specific classes.
          - All `Pet`s in `pets` vector should be displayed using a for loop, each `Pet` information will be seperated by a newline.
+         - THe ADDRESS and PETS LIST lines will also be on a field of 13 and aligned left. Pay special attention to new line spacing as well.
          - <strong>If there are no pets under the person then display 'NONE' under 'PETS LIST' </strong>. 
 
 ```
@@ -192,6 +232,14 @@ DOB          :                <DOB>
 TYPE         :               <Type>
 BREED        :              <breed>
 ```
+
+<!-- Important (Yellow) -->
+<div
+    style="background-color: #FEF9C3; border-left: 6px solid #F59E0B; color: #854D0E; padding: 16px;  border-radius: 5px;">
+    <i class="fa-solid fa-exclamation" style="margin-right: 10px;"></i>
+    <b style="display: inline; margin-bottom: 8px; font-size: 16px;">Important!</b>
+    <p>Friend functions must appear above functions that use them in the files where they are implemented. This means that the +/- operators must be overloaded before addPet and deletePet. You will get undefined reference errors if they aren't implemented in the right order since friend functions aren't true member functions in this instance.</p>
+</div>
 
 ### Below is the **UML** representation of the class `Date`.
 
@@ -271,7 +319,7 @@ classDiagram
         + getType() std::string
         + getBreed() std::string
         + setName(const std::string&) void
-        + setDate(const int&, const int&, const int&) void
+        + setDOB(const int&, const int&, const int&) void
         + setType(const int&) void
         + setBreed(const std::string&) void
 
