@@ -105,7 +105,7 @@ In this assignment, we take a look at pointers, classes (Has-A relationship) and
       - All `string` variables will have values stored in <strong>upper-case</strong> only.
       -  The `operator>>` function takes `istream&` (for `cin`) and `Address&` (for `Address` object ) as parameters and returns `istream&` (for `cin`). It will be declared as a `friend` of `Address` class.
       - The `overloaded >>` operator sets the values for all member variables using user input.
-         The Autograder will send inputs in the following sequence. A new line indicates that the enter/return key has been pressed:
+         The Autograder will send inputs in the following sequence. As always, the <> aren't included in the actual inputs. A new line indicates that the enter/return key has been pressed:
          ```
          <STREET>
          <CITY>
@@ -142,7 +142,7 @@ ZIP CODE     :                <zip>
          - If any other values are passed as input (default), then the type will be specified by user-input.
       - The `operator>>` function takes `istream&` (for `cin`) and `Pet&` (for `Pet` object ) as parameters and returns `istream&` (for `cin`).
       - The `overloaded >>` operator sets the values for all member variables using user input.  It will be declared as a `friend` of `Pet` class.
-        The Autograder will send inputs in the following sequence. A new line indicates that the enter/return key has been pressed:
+        The Autograder will send inputs in the following sequence. As always, the <> aren't included in the actual inputs. A new line indicates that the enter/return key has been pressed:
          ```
          <NAME>
          <MONTH>
@@ -181,7 +181,7 @@ BREED        :              <breed>
       - All `string` variables will have values stored in <strong>upper-case</strong> only.
       - The `operator>>` function takes `istream&` (for `cin`) and `Person&` (for `Person` object ) as parameters and returns `istream&` (for `cin`). It will be declared as a `friend` of `Person` class.
         - The `overloaded >>` operator sets the values for first name, last name and address using user input.
-          The Autograder will send inputs in the following sequence. A new line indicates that the enter/return key has been pressed:
+          The Autograder will send inputs in the following sequence. As always, the <> aren't included in the actual inputs. A new line indicates that the enter/return key has been pressed:
          ```
          <FNAME>
          <LNAME>
