@@ -151,7 +151,7 @@ Monthly Payment:  522.917
 	- `AmortizedLoan()` : calls default constructor of `Loan`
 	- `AmortizedLoan(float, float, int)` : calls parameterized constructor of `Loan`, setting `loanType` as `"Amortized Loan"`
 - Monthly Payment
-	- `monthlyPayment()` : this will override the monthly payment function of the `Loan` class. The formula to calculate the monthly payment of an amortized loan is as follows: ![LatexEqn](Amortized.png), where P is the principal amount, R is the **monthly** interest rate, and L is the length in **months**. Remember, `loanLength` by default is in **years**, and `interestRate` is the **yearly** interest rate given as a value between 0-100 instead of 0-1, so both of these values must be converted to the proper format before the monthly interest rate is calculated.
+	- `monthlyPayment()` : this will override the monthly payment function of the `Loan` class. The formula to calculate the monthly payment of an amortized loan is as follows: ![LatexEqn](.devcontainer/Amortized.png), where P is the principal amount, R is the **monthly** interest rate, and L is the length in **months**. Remember, `loanLength` by default is in **years**, and `interestRate` is the **yearly** interest rate given as a value between 0-100 instead of 0-1, so both of these values must be converted to the proper format before the monthly interest rate is calculated.
 
 ##### Below is the **UML** representation of the class structure of `Loan`, `SimpleLoan` and `AmortizedLoan`.
 
