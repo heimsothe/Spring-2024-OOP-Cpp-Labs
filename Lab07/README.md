@@ -176,7 +176,7 @@ class Loan {
 + Loan(float, float, int, string)
 + getPrincipal() float
 + getInterestRate() float
-+ getLoanLength() int
++ getLoanLength() float
 + getLoanType() string
 + setPrincipal(float) void
 + setInterestRate(float) void
