@@ -58,9 +58,13 @@ void Address::setZip(const size_t& theZipCode) {
 
 // Friend I/O operators
 std::istream& operator>>(std::istream& in, Address& address) {
+    std::cout << "Enter street: ";
     getline(in, address.street);
+    std::cout << "Enter city: ";
     getline(in, address.city);
+    std::cout << "Enter state: ";
     getline(in, address.state);
+    std::cout << "Enter zip code: ";
     in >> address.zipCode;
     // Clear the newline character after reading zipCode
     in.ignore(10000, '\n');
