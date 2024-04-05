@@ -17,10 +17,10 @@ class Address {
         Address(const std::string& aStreet, const std::string& aCity, const std::string& aState, const size_t& aZipCode);
 
         // Getters
-        std::string getStreet() const;
-        std::string getCity() const;
-        std::string getState() const;
-        size_t getZip() const;
+        std::string getStreet();
+        std::string getCity();
+        std::string getState();
+        size_t getZip();
 
         // Setters
         void setStreet(const std::string& theStreet);

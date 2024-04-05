@@ -20,19 +20,19 @@ Address::Address(const std::string& aStreet, const std::string& aCity, const std
 }
 
 // Getters
-std::string Address::getStreet() const {
+std::string Address::getStreet()  {
     return street;
 }
 
-std::string Address::getCity() const {
+std::string Address::getCity()  {
     return city;
 }
 
-std::string Address::getState() const {
+std::string Address::getState()  {
     return state;
 }
 
-size_t Address::getZip() const {
+size_t Address::getZip()  {
     return zipCode;
 }
 
