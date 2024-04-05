@@ -29,7 +29,7 @@ class Address {
         void setZip(const size_t& theZipCode);
 
         // Friends
-        friend std::ostream& operator<<(std::ostream& out, const Address& address); // for output
         friend std::istream& operator>>(std::istream& in, Address& address); // for input
+        friend std::ostream& operator<<(std::ostream& out, Address& address); // for output
 };
 #endif

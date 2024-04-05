@@ -57,15 +57,6 @@ void Address::setZip(const size_t& theZipCode) {
 }
 
 // Friend I/O operators
-
-std::ostream& operator<<(std::ostream& out, const Address& address) {
-    out << std::left << std::setw(13) << "STREET" << ": " << std::setw(21) << address.street << "\n";
-    out << std::left << std::setw(13) << "CITY" << ": " << std::setw(21) << address.city << "\n";
-    out << std::left << std::setw(13) << "STATE" << ": " << std::setw(21) << address.state << "\n";
-    out << std::left << std::setw(13) << "ZIP CODE" << ": " << std::setw(21) << address.zipCode << "\n";
-    return out;
-}
-
 std::istream& operator>>(std::istream& in, Address& address) {
     getline(in, address.street);
     getline(in, address.city);
@@ -81,5 +72,13 @@ std::istream& operator>>(std::istream& in, Address& address) {
     std::transform(address.state.begin(), address.state.end(), address.state.begin(), toupper);
 
     return in;
+}
+
+std::ostream& operator<<(std::ostream& out, Address& address) {
+    out << std::left << std::setw(13) << "STREET" << ": " << std::setw(21) << address.street << "\n";
+    out << std::left << std::setw(13) << "CITY" << ": " << std::setw(21) << address.city << "\n";
+    out << std::left << std::setw(13) << "STATE" << ": " << std::setw(21) << address.state << "\n";
+    out << std::left << std::setw(13) << "ZIP CODE" << ": " << std::setw(21) << address.zipCode << "\n";
+    return out;
 }
 
