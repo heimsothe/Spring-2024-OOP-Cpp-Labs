@@ -11,9 +11,9 @@
 
 #include "Date.h"
 
-// Fig. 9.18: Date.cpp 
-// Date class member-function definitions. 
-#include <array> 
+// Fig. 9.18: Date.cpp
+// Date class member-function definitions.
+#include <array>
     using std::array;
 #include <iostream>
     using std::cout;
@@ -22,7 +22,7 @@
 #include <stdexcept>
 
 #include "Date.h"// include Date class definition
-// constructor confirms proper value for month; calls 
+// constructor confirms proper value for month; calls
 // utility function checkDay to confirm proper value for day
 Date::Date( int mn, int dy, int yr )
 {
@@ -36,8 +36,8 @@ Date::Date( int mn, int dy, int yr )
     cout << endl;
 } // end Date constructor
 
-string Date::dateString() 
-{ 
+string Date::dateString()
+{
     return to_string(month) + "/" +  to_string(day) + "/" + to_string(year);
 } // end function print
 // output Date object to show when its destructor is called

@@ -1,0 +1,35 @@
+#ifndef ADDRESS_H
+#define ADDRESS_H
+
+#include <string>
+#include <iostream>
+
+class Address {
+    private:
+        std::string street;
+        std::string city;
+        std::string state;
+        size_t zipCode;
+
+    public:
+        // Constructors
+        Address();
+        Address(const std::string& aStreet, const std::string& aCity, const std::string& aState, const size_t& aZipCode);
+
+        // Getters
+        std::string getStreet() const;
+        std::string getCity() const;
+        std::string getState() const;
+        size_t getZip() const;
+
+        // Setters
+        void setStreet(const std::string& theStreet);
+        void setCity(const std::string& theCity);
+        void setState(const std::string& theState);
+        void setZip(const size_t& theZipCode);
+
+        // Friends
+        friend std::istream& operator>>(std::istream& in, Address& address); // for input
+        friend std::ostream& operator<<(std::ostream& out, const Address& address); // for output
+};
+#endif
