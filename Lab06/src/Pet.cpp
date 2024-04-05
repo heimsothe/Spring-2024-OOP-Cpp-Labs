@@ -78,20 +78,29 @@ void Pet::setBreed(const std::string& theBreed) {
 
 // Friend I/O operators
 std::istream& operator>>(std::istream& in, Pet& pet) {
+    std::cout << "Enter pet name: ";
     getline(in, pet.name);
 
     int theMonth, theDay, theYear;
-    in >> theMonth >> theDay >> theYear;
+    std::cout << "Enter pet birth month: ";
+    in >> theMonth;
+    std::cout << "Enter pet birth day: ";
+    in >> theDay;
+    std::cout << "Enter pet birth year: ";
+    in >> theYear;
     // Clear the newline character
     in.ignore(10000, '\n');
     pet.setDOB(theMonth, theDay, theYear);
 
+    std::cout << "Enter pet type (1 = DOG, 2 = CAT, 3 = BIRD, 4 = SNAKE): ";
     int theTypeNum;
     in >> theTypeNum;
     // Clear the newline character
     //in.ignore(10000, '\n');
     pet.setType(theTypeNum);
     in.ignore(10000, '\n');
+
+    std::cout << "Enter pet breed: ";
     getline(in, pet.breed);
 
     std::transform(pet.name.begin(), pet.name.end(), pet.name.begin(), ::toupper);
