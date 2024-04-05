@@ -89,9 +89,9 @@ std::istream& operator>>(std::istream& in, Pet& pet) {
     int theTypeNum;
     in >> theTypeNum;
     // Clear the newline character
-    in.ignore(10000, '\n');
+    //in.ignore(10000, '\n');
     pet.setType(theTypeNum);
-
+    in.ignore(10000, '\n');
     getline(in, pet.breed);
 
     std::transform(pet.name.begin(), pet.name.end(), pet.name.begin(), ::toupper);
