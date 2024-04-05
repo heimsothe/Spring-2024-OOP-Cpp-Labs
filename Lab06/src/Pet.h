@@ -14,7 +14,7 @@ private:
 
 public:
     // Constructors
-    Pet();
+    Pet(); // Default constructor
     Pet(const std::string& aName, const Date& aDOB, const int& aTypeNum, const std::string& aBreed);
 
     // Getters
