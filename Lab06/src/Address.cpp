@@ -13,10 +13,10 @@ Address::Address() {
 
 // Full constructor
 Address::Address(const std::string& aStreet, const std::string& aCity, const std::string& aState, const size_t& aZipCode) {
-    street = aStreet;
-    city = aCity;
-    state = aState;
-    zipCode = aZipCode;
+    setStreet(aStreet);
+    setCity(aCity);
+    setState(aState);
+    setZip(aZipCode);
 }
 
 // Getters
