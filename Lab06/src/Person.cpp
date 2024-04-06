@@ -167,7 +167,7 @@ void Person::addPet() {
     std::string newPetName = newPet->getName();
     if (searchPet(newPetName) == true) {
         delete newPet;
-        std::cout << "Pet with same name already exists.";
+        throw "Pet with same name already exists.";
     }
     else {
         pets + newPet;
