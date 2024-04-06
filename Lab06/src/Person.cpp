@@ -126,20 +126,14 @@ std::ostream& operator<<(std::ostream& out, Person& person) {
     out << std::left << std::setw(13) << "LAST NAME" << ":" << std::right << std::setw(21) << person.lName << "\n\n";
     out << std::left << std::setw(13) << "ADDRESS";
     out << "\n" << person.address << "\n";
-    // out << std::left << std::setw(13) << "STREET" << ":" << std::right << std::setw(21) << person.address.getStreet() << "\n";
-    // out << std::left << std::setw(13) << "CITY" << ":" << std::right << std::setw(21) << person.address.getCity() << "\n";
-    // out << std::left << std::setw(13) << "STATE" << ":" << std::right << std::setw(21) << person.address.getState() << "\n";
-    // out << std::left << std::setw(13) << "ZIP" << ":" << std::right << std::setw(21) << person.address.getZip() << "\n\n";
 
     out << std::left << std::setw(13) << "PETS LIST";
     if(person.pets.empty() == true){
          out << "\n" << std::left << "NONE" << "\n";
-        //out << "\n" << std::left << std::setw(13) << "NONE" << "\n";
     }
     else{
         out << "\n";
         for (auto pet : person.pets) {
-            //out << pet << "\n";
             out << *pet << "\n";
         }
     }
