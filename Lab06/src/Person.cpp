@@ -133,7 +133,8 @@ std::ostream& operator<<(std::ostream& out, Person& person) {
 
     out << std::left << std::setw(13) << "PETS LIST";
     if(person.pets.empty() == true){
-        out << "\n" << std::left << std::setw(13) << "NONE" << "\n";
+         out << "\n" << std::left << "NONE" << "\n";
+        //out << "\n" << std::left << std::setw(13) << "NONE" << "\n";
     }
     else{
         out << "\n";
