@@ -136,6 +136,7 @@ std::ostream& operator<<(std::ostream& out, Person& person) {
         out << std::left << std::setw(13) << "NONE";
     }
     else{
+        out << "\n";
         for (auto pet : person.pets) {
             //out << pet << "\n";
             out << *pet << "\n";
