@@ -1,3 +1,15 @@
+/********************************************************
+Name      :  Elijah Heimsoth
+Class     :  CSCI 2312 Section H01
+PA#       :  PA6
+Due Date  :  04/05/2024
+*********************************************************
+*********************************************************
+* Summary: This file contains the class prototyping for
+  the Person class implemented in Person.cpp.
+
+* Created: 04/04/2024
+********************************************************/
 #ifndef PERSON_H
 #define PERSON_H
 

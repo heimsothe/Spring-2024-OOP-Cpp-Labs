@@ -1,3 +1,15 @@
+/********************************************************
+Name      :  Elijah Heimsoth
+Class     :  CSCI 2312 Section H01
+PA#       :  PA6
+Due Date  :  04/05/2024
+*********************************************************
+*********************************************************
+* Summary: This file contains prototyping for the Address
+  class implemented in Address.cpp.
+
+* Created: 04/04/2024
+********************************************************/
 #ifndef ADDRESS_H
 #define ADDRESS_H
 
