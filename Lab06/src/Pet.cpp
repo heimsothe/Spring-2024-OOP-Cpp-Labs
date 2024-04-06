@@ -131,7 +131,7 @@ std::ostream& operator<<(std::ostream& out, Pet& pet) {
     out << std::left << std::setw(13) << "NAME" << ":" << std::right << std::setw(21) << pet.name << "\n";
     out << std::left << std::setw(13) << "DOB" << ":" << std::right << std::setw(21) << pet.DOB.dateString() << "\n";
     out << std::left << std::setw(13) << "TYPE" << ":" << std::right << std::setw(21) << pet.type << "\n";
-    out << std::left << std::setw(13) << "BREED" << ":" << std::right << std::setw(21) << pet.breed << "\n";
+    out << std::left << std::setw(13) << "BREED" << ":" << std::right << std::setw(21) << pet.breed;
     return out;
 }
 
