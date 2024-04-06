@@ -175,9 +175,9 @@ void Person::addPet() {
 // Delete a pet from the vector of pets
 void Person::deletePet() {
     std::string petName;
-    std::cout << "Enter the name of the pet you would like to delete: ";
+    //std::cout << "Enter the name of the pet you would like to delete: ";
     std::cin >> petName;
-    std::transform(petName.begin(), petName.end(), petName.begin(), toupper);
+    //std::transform(petName.begin(), petName.end(), petName.begin(), toupper);
     if (searchPet(petName) == false) {
         throw "Pet not found.";
     }
