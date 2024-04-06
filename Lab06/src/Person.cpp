@@ -124,8 +124,8 @@ std::istream& operator>>(std::istream& in, Person& person) {
 std::ostream& operator<<(std::ostream& out, Person& person) {
     out << std::left << std::setw(13) << "FIRST NAME" << ":" << std::right << std::setw(21) << person.fName << "\n";
     out << std::left << std::setw(13) << "LAST NAME" << ":" << std::right << std::setw(21) << person.lName << "\n\n";
-    out << std::left << std::setw(13) << "ADDRESS\n";
-    out << person.address << "\n";
+    out << std::left << std::setw(13) << "ADDRESS";
+    out << "\n" << person.address << "\n";
     // out << std::left << std::setw(13) << "STREET" << ":" << std::right << std::setw(21) << person.address.getStreet() << "\n";
     // out << std::left << std::setw(13) << "CITY" << ":" << std::right << std::setw(21) << person.address.getCity() << "\n";
     // out << std::left << std::setw(13) << "STATE" << ":" << std::right << std::setw(21) << person.address.getState() << "\n";
@@ -177,7 +177,7 @@ void Person::deletePet() {
     std::string petName;
     //std::cout << "Enter the name of the pet you would like to delete: ";
     std::cin >> petName;
-    //std::transform(petName.begin(), petName.end(), petName.begin(), toupper);
+    std::transform(petName.begin(), petName.end(), petName.begin(), toupper);
     if (searchPet(petName) == false) {
         throw "Pet not found.";
     }
