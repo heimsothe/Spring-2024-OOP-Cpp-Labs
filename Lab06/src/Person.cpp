@@ -148,7 +148,10 @@ std::ostream& operator<<(std::ostream& out, Person& person) {
 // Other member functions
 bool Person::searchPet(const std::string& petName) {
     //bool match = false;
-    for (auto *pet : pets) {
+    if (pets.empty() == true) {
+        return false;
+    }
+    for (auto pet : pets) {
         // if (pet->getName() == petName) {
         if (pet->getName() == petName) {
             return true;
