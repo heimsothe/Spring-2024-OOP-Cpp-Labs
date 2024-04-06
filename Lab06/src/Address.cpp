@@ -82,6 +82,6 @@ std::ostream& operator<<(std::ostream& out, Address& address) {
     out << std::left << std::setw(13) << "STREET" << ":" << std::right << std::setw(21) << address.street << "\n";
     out << std::left << std::setw(13) << "CITY" << ":" << std::right << std::setw(21) << address.city << "\n";
     out << std::left << std::setw(13) << "STATE" << ":" << std::right << std::setw(21) << address.state << "\n";
-    out << std::left << std::setw(13) << "ZIP CODE" << ":" << std::right << std::setw(21) << address.zipCode;
+    out << std::left << std::setw(13) << "ZIP CODE" << ":" << std::right << std::setw(21) << address.zipCode << "\n";
     return out;
 }
