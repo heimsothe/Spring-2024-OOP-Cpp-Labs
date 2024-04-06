@@ -131,7 +131,7 @@ std::ostream& operator<<(std::ostream& out, Person& person) {
     // out << std::left << std::setw(13) << "STATE" << ":" << std::right << std::setw(21) << person.address.getState() << "\n";
     // out << std::left << std::setw(13) << "ZIP" << ":" << std::right << std::setw(21) << person.address.getZip() << "\n\n";
 
-    out << std::left << std::setw(13) << "PETS\n";
+    out << std::left << std::setw(13) << "PETS LIST";
     if(person.pets.empty() == true){
         out << std::left << std::setw(13) << "NONE";
     }
