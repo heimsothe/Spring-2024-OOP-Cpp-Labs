@@ -137,8 +137,8 @@ std::ostream& operator<<(std::ostream& out, Person& person) {
     }
     else{
         for (auto pet : person.pets) {
-            out << pet << "\n";
-            //out << *pet << "\n";
+            //out << pet << "\n";
+            out << *pet << "\n";
         }
     }
 
@@ -147,7 +147,6 @@ std::ostream& operator<<(std::ostream& out, Person& person) {
 
 // Other member functions
 bool Person::searchPet(const std::string& searchName) {
-    std::transform(searchName.begin(), searchName.end(), searchName.begin(), toupper);
     bool match = false;
     for (auto pet : pets) {
         if (pet->getName() == searchName) {
