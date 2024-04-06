@@ -137,8 +137,8 @@ std::ostream& operator<<(std::ostream& out, Person& person) {
     }
     else{
         for (auto pet : person.pets) {
-            out << pet << "\n";
-            //out << *pet << "\n";
+            //out << pet << "\n";
+            out << *pet << "\n";
         }
     }
 
