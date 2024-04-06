@@ -180,7 +180,7 @@ void Person::deletePet() {
     std::cin >> petName;
     std::transform(petName.begin(), petName.end(), petName.begin(), toupper);
     if (searchPet(petName) == false) {
-        std::cout << "Pet not found.";
+        throw "Pet not found.";
     }
     else {
         pets - petName;
