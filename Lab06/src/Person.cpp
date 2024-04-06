@@ -83,12 +83,17 @@ void operator+(std::vector<Pet*>& pets, Pet* pet) {
 
 // Turn - operator into a function that removes a pet from the vector of pets
 void operator-(std::vector<Pet*>& pets, const std::string& petName) {
-    for (auto itr = pets.begin(); itr != pets.end(); /*intentionally blank*/) {
+    for (auto itr = pets.begin(); itr != pets.end(); itr++) {
         if ((*itr)->getName() == petName) {
+            delete *itr;
             itr = pets.erase(itr);
-        } else {
+            return;
+        }
+        /*
+        else {
             ++itr;
         }
+        */
     }
 }
 
