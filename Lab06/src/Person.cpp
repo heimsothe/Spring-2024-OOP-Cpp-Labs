@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <iostream>
 #include <iomanip>
+#include <stdexcept>
 
 // Default Constructor
 Person::Person() {
@@ -166,7 +167,7 @@ void Person::addPet() {
     std::string newPetName = newPet->getName();
     if (searchPet(newPetName) == true) {
         delete newPet;
-        throw "Pet with same name already exists.";
+        std::cout << "Pet with same name already exists.";
     }
     else {
         pets + newPet;
@@ -180,7 +181,7 @@ void Person::deletePet() {
     std::cin >> petName;
     std::transform(petName.begin(), petName.end(), petName.begin(), toupper);
     if (searchPet(petName) == false) {
-        throw "Pet not found.";
+        throw std::invalid_argument("Pet not found.");
     }
     else {
         pets - petName;
