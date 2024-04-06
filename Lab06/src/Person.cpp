@@ -137,8 +137,8 @@ std::ostream& operator<<(std::ostream& out, Person& person) {
     }
     else{
         for (auto pet : person.pets) {
-            //out << pet << "\n";
-            out << *pet << "\n";
+            out << pet << "\n";
+            //out << *pet << "\n";
         }
     }
 
@@ -146,14 +146,15 @@ std::ostream& operator<<(std::ostream& out, Person& person) {
 }
 
 // Other member functions
-bool Person::searchPet(const std::string& searchName) {
-    bool match = false;
-    for (auto pet : pets) {
-        if (pet->getName() == searchName) {
-            match = true;
+bool Person::searchPet(const std::string& petName) {
+    //bool match = false;
+    for (auto *pet : pets) {
+        // if (pet->getName() == petName) {
+        if (pet->getName() == petName) {
+            return true;
         }
     }
-    return match;
+    return false;
 }
 
 // Add a new pet to the vector of pets if the pet does not already exist

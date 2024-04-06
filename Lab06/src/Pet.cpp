@@ -41,7 +41,7 @@ std::string Pet::getBreed() {
 // Setters
 void Pet::setName(const std::string& theName) {
     name = theName;
-    std::transform(name.begin(), name.end(), name.begin(), ::toupper);
+    std::transform(name.begin(), name.end(), name.begin(), toupper);
 }
 
 void Pet::setDOB(const int& theMonth, const int& theDay, const int& theYear) {
@@ -73,7 +73,7 @@ void Pet::setType(const int& typeNum) {
 
 void Pet::setBreed(const std::string& theBreed) {
     breed = theBreed;
-    std::transform(breed.begin(), breed.end(), breed.begin(), ::toupper);
+    std::transform(breed.begin(), breed.end(), breed.begin(), toupper);
 }
 
 // Friend I/O operators
@@ -82,7 +82,7 @@ std::istream& operator>>(std::istream& in, Pet& pet) {
     std::cout << "Enter pet name: ";
     getline(in, pet.name);
     // Convert name to uppercase
-    std::transform(pet.name.begin(), pet.name.end(), pet.name.begin(), ::toupper);
+    std::transform(pet.name.begin(), pet.name.end(), pet.name.begin(), toupper);
 
     // DOB
     int theMonth, theDay, theYear;
