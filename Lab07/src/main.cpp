@@ -18,5 +18,7 @@ int main() {
     SimpleLoan testLoan(1000, 5, 6);
     std::cout << "Simple Loan:" << std::endl;
     testLoan.displayLoan();
-    std::cout << "Loan Length: " << testLoan.getLoanLength() << " years" << std::endl;
+    std::cout << std::endl;
+
+    // Create an Amortized Loan
 }
