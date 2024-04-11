@@ -15,7 +15,7 @@ public:
     Loan();
 
     // Parameterized constructor
-    Loan(float aPrincipal, float aInterestRate, int aLoanLength, std::string aLoanType);
+    explicit Loan(float aPrincipal, float aInterestRate, int aLoanLength, std::string aLoanType);
 
     // Destructor
     virtual ~Loan();

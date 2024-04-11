@@ -1,5 +1,5 @@
 #include "SimpleLoan.h"
-#include "Loan.h"
+//#include "Loan.h"
 
 // Default constructor
 SimpleLoan::SimpleLoan(){};

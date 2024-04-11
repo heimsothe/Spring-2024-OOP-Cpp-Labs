@@ -9,7 +9,7 @@ public:
     SimpleLoan();
 
     // Parameterized constructor
-    SimpleLoan(float aPrincipal, float aInterestRate, int aLoanLength);
+    explicit SimpleLoan(float aPrincipal, float aInterestRate, int aLoanLength);
 
     // Virtual destructor
     virtual ~SimpleLoan();
