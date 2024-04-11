@@ -71,7 +71,7 @@ void Loan::displayLoan() {
 }
 
 
-// saveLoan function implementation
+// saveLoan: Writes the loan information to a file
 void Loan::saveLoan() {
     // Directory and file name
     const std::string directory = "data/";
