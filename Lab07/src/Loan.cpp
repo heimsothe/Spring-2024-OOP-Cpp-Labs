@@ -35,8 +35,8 @@ float Loan::getInterestRate() {
 }
 
 float Loan::getLoanLength() {
-    float loanLength = static_cast<float>(this->loanLength);
-    return loanLength;
+    float loanLengthFloat = static_cast<float>(loanLength);
+    return loanLengthFloat;
 }
 
 std::string Loan::getLoanType() {
