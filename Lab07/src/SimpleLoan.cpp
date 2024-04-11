@@ -34,6 +34,7 @@ SimpleLoan::~SimpleLoan() {
 // Override the monthly payment function
 float SimpleLoan::monthlyPayment() {
     // MONTHLY PAYMENT: (P*(R*L + 1)) / L
+    // P = principal, R = monthly interest rate, L = total months
     float monthlyRate = interestRate / 1200.0f;
     int totalMonths = loanLength * 12;
     float monthlyPayment = (principal * (monthlyRate * totalMonths + 1)) / totalMonths;

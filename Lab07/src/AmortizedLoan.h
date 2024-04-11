@@ -11,6 +11,9 @@ public:
     // Parameterized constructor
     AmortizedLoan(float aPrincipal, float aInterestRate, int aLoanLength);
 
+    // Destructor
+    virtual ~AmortizedLoan();
+
     // Override the monthly payment function
     float monthlyPayment() override;
 };
