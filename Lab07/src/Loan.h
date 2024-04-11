@@ -40,4 +40,4 @@ public:
     void saveLoan();
 };
 
-#endif // LOAN_H
+#endif
