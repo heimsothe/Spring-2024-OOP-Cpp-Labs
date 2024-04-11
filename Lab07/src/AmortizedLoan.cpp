@@ -1,3 +1,38 @@
+/*
+file: AmortizedLoan.cpp
+Name: Elijah Heimsoth
+Date: 4/11/2024
+Description: This is the implementation file for the AmortizedLoan class.
+It contains the implementation of the class functions.
+
+FUNCTIONS:
+
+// Default constructor
+AmortizedLoan();
+Receives: Nothing
+Returns: Nothing
+Description: This is the default constructor for the AmortizedLoan class.
+
+// Parameterized constructor
+AmortizedLoan(float aPrincipal, float aInterestRate, int aLoanLength);
+Receives: aPrincipal, aInterestRate, aLoanLength
+Returns: Nothing
+Description: This is the parameterized constructor for the AmortizedLoan class.
+
+// Destructor
+virtual ~AmortizedLoan();
+Receives: Nothing
+Returns: Nothing
+Description: This is the destructor for the AmortizedLoan class.
+
+// Override the monthly payment function
+float monthlyPayment() override;
+Receives: Nothing
+Returns: a float
+Description: This function overrides the monthly payment function from the Loan class.
+It calculates the monthly payment for an amortized loan.
+*/
+
 #include "AmortizedLoan.h"
 #include <cmath>
 

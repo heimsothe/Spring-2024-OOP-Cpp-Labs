@@ -1,10 +1,23 @@
+/*
+file: main.cpp
+Name: Elijah Heimsoth
+Date: 4/11/2024
+Description: This is the main file for the Loan program.
+It contains the main function that tests the Loan classes.
+
+FUNCTIONS:
+
+// Main function
+int main();
+Receives: Nothing
+Returns: 0
+Description: This is the main function for the Loan program.
+*/
+
 #include "Loan.h"
 #include "SimpleLoan.h"
 #include "AmortizedLoan.h"
 #include <iostream>
-#include <iomanip>
-#include <fstream>
-#include <string>
 
 int main() {
     // Create an empty simple loan
@@ -37,5 +50,6 @@ int main() {
     testSimpleLoan.saveLoan();
     testAmortizedLoan.saveLoan();
 
+    return 0;
 
 }
