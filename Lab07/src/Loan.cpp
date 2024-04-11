@@ -34,7 +34,8 @@ float Loan::getInterestRate() {
     return interestRate;
 }
 
-int Loan::getLoanLength() {
+float Loan::getLoanLength() {
+    float loanLength = static_cast<float>(this->loanLength);
     return loanLength;
 }
 

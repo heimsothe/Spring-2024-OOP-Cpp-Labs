@@ -23,7 +23,7 @@ public:
     // Getters
     float getPrincipal();
     float getInterestRate();
-    int getLoanLength();
+    float getLoanLength();
     std::string getLoanType();
 
     // Setters
