@@ -79,7 +79,17 @@ void Loan::saveLoan() {
 
     // Open file in output mode (overwrites existing file or creates a new one if it doesn't exist)
     std::ofstream outFile(directory + filename, std::ios::out);
+
+    // Write the loan information to the file
+    outFile << getPrincipal() << " "
+            << getInterestRate() << " "
+            << getLoanLength() << " "
+            << std::endl;
+        
+    // Close the file
+    outFile.close();
     
+    /*
     // Check if the file is open
     if (outFile.is_open()) {
         // Write the loan information to the file
@@ -93,4 +103,5 @@ void Loan::saveLoan() {
     } else {
         std::cerr << "Unable to open file for writing." << std::endl;
     }
+    */
 }
