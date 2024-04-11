@@ -37,8 +37,6 @@ float AmortizedLoan::monthlyPayment() {
     // P = principal, R = monthly interest rate, L = total months
     float monthlyRate = interestRate / 1200.0f;
     int totalMonths = loanLength * 12;
-    float totalMonthsFloat = static_cast<float>(totalMonths);
-
-    float monthlyPayment = (principal * monthlyRate * pow(1.0f + monthlyRate, totalMonthsFloat)) / (pow(1.0f + monthlyRate, totalMonthsFloat) - 1);
+    float monthlyPayment = (principal * monthlyRate * pow(1 + monthlyRate, totalMonths)) / (pow(1 + monthlyRate, totalMonths) - 1);
     return monthlyPayment;
 }
