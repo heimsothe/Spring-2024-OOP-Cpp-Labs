@@ -15,7 +15,7 @@ public:
     virtual ~SimpleLoan();
 
     // Override the monthly payment function
-    float monthlyPayment() const override;
+    float monthlyPayment() override;
 };
 
 #endif

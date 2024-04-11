@@ -33,7 +33,7 @@ public:
     void setLoanType(std::string theLoanType);
 
     // Base class functions
-    virtual float monthlyPayment() const = 0; // Pure virtual function
+    virtual float monthlyPayment() = 0; // Pure virtual function
     void displayLoan();
 
     // File I/O
